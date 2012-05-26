@@ -45,7 +45,7 @@ def report_bug(request,hospital_slug):
     hospital = get_object_or_404(Hospital, slug=hospital_slug)
     form = BugForm(request.POST or None,
                    request.FILES or None,
-                   initial={"reporter":request.user,"hospital_id":hospital.id})
+                   initial={"reporter":request.user,"hospital":hospital})
     if request.method == 'POST':
         if form.is_valid():
             b = form.save(commit=False)
