@@ -256,6 +256,7 @@
 		7EF39FD9157111C20042CB84 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NHSBugs/NHSBugs-Prefix.pch";
 				INFOPLIST_FILE = "NHSBugs/NHSBugs-Info.plist";
@@ -269,6 +270,7 @@
 		7EF39FDA157111C20042CB84 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NHSBugs/NHSBugs-Prefix.pch";
 				INFOPLIST_FILE = "NHSBugs/NHSBugs-Info.plist";
