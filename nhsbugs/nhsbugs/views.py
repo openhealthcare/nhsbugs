@@ -40,7 +40,6 @@ def login_view(request):
                                 password=form.cleaned_data['password'])
             if user is not None:
                 if user.is_active:
-                    print user
                     login(request, user)
                     return HttpResponseRedirect(request.GET.get('next', '/'))
                 else:
