@@ -3,5 +3,8 @@
 
 
 {% block content %}
-List of SHAs
+
+{% for sha in shas %}
+    <a href="{% url 'view_sha' sha.slug %}"><br/>
+{% endfor %}
 {% endblock %}
