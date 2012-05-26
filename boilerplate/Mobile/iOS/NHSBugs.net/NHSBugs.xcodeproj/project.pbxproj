@@ -1,0 +1,279 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7EF39FBF157111C20042CB84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EF39FBE157111C20042CB84 /* UIKit.framework */; };
+		7EF39FC1157111C20042CB84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EF39FC0157111C20042CB84 /* Foundation.framework */; };
+		7EF39FC3157111C20042CB84 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EF39FC2157111C20042CB84 /* CoreGraphics.framework */; };
+		7EF39FC9157111C20042CB84 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7EF39FC7157111C20042CB84 /* InfoPlist.strings */; };
+		7EF39FCB157111C20042CB84 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF39FCA157111C20042CB84 /* main.m */; };
+		7EF39FCF157111C20042CB84 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF39FCE157111C20042CB84 /* AppDelegate.m */; };
+		7EF39FD2157111C20042CB84 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF39FD1157111C20042CB84 /* ViewController.m */; };
+		7EF39FD5157111C20042CB84 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EF39FD3157111C20042CB84 /* ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7EF39FBA157111C20042CB84 /* NHSBugs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NHSBugs.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EF39FBE157111C20042CB84 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7EF39FC0157111C20042CB84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7EF39FC2157111C20042CB84 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7EF39FC6157111C20042CB84 /* NHSBugs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NHSBugs-Info.plist"; sourceTree = "<group>"; };
+		7EF39FC8157111C20042CB84 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7EF39FCA157111C20042CB84 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7EF39FCC157111C20042CB84 /* NHSBugs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NHSBugs-Prefix.pch"; sourceTree = "<group>"; };
+		7EF39FCD157111C20042CB84 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7EF39FCE157111C20042CB84 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7EF39FD0157111C20042CB84 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		7EF39FD1157111C20042CB84 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7EF39FD4157111C20042CB84 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7EF39FB7157111C10042CB84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EF39FBF157111C20042CB84 /* UIKit.framework in Frameworks */,
+				7EF39FC1157111C20042CB84 /* Foundation.framework in Frameworks */,
+				7EF39FC3157111C20042CB84 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7EF39FAF157111C10042CB84 = {
+			isa = PBXGroup;
+			children = (
+				7EF39FC4157111C20042CB84 /* NHSBugs */,
+				7EF39FBD157111C20042CB84 /* Frameworks */,
+				7EF39FBB157111C20042CB84 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7EF39FBB157111C20042CB84 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7EF39FBA157111C20042CB84 /* NHSBugs.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7EF39FBD157111C20042CB84 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7EF39FBE157111C20042CB84 /* UIKit.framework */,
+				7EF39FC0157111C20042CB84 /* Foundation.framework */,
+				7EF39FC2157111C20042CB84 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7EF39FC4157111C20042CB84 /* NHSBugs */ = {
+			isa = PBXGroup;
+			children = (
+				7EF39FCD157111C20042CB84 /* AppDelegate.h */,
+				7EF39FCE157111C20042CB84 /* AppDelegate.m */,
+				7EF39FD0157111C20042CB84 /* ViewController.h */,
+				7EF39FD1157111C20042CB84 /* ViewController.m */,
+				7EF39FD3157111C20042CB84 /* ViewController.xib */,
+				7EF39FC5157111C20042CB84 /* Supporting Files */,
+			);
+			path = NHSBugs;
+			sourceTree = "<group>";
+		};
+		7EF39FC5157111C20042CB84 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7EF39FC6157111C20042CB84 /* NHSBugs-Info.plist */,
+				7EF39FC7157111C20042CB84 /* InfoPlist.strings */,
+				7EF39FCA157111C20042CB84 /* main.m */,
+				7EF39FCC157111C20042CB84 /* NHSBugs-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7EF39FB9157111C10042CB84 /* NHSBugs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EF39FD8157111C20042CB84 /* Build configuration list for PBXNativeTarget "NHSBugs" */;
+			buildPhases = (
+				7EF39FB6157111C10042CB84 /* Sources */,
+				7EF39FB7157111C10042CB84 /* Frameworks */,
+				7EF39FB8157111C10042CB84 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NHSBugs;
+			productName = NHSBugs;
+			productReference = 7EF39FBA157111C20042CB84 /* NHSBugs.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7EF39FB1157111C10042CB84 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 7EF39FB4157111C10042CB84 /* Build configuration list for PBXProject "NHSBugs" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7EF39FAF157111C10042CB84;
+			productRefGroup = 7EF39FBB157111C20042CB84 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7EF39FB9157111C10042CB84 /* NHSBugs */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7EF39FB8157111C10042CB84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EF39FC9157111C20042CB84 /* InfoPlist.strings in Resources */,
+				7EF39FD5157111C20042CB84 /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7EF39FB6157111C10042CB84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EF39FCB157111C20042CB84 /* main.m in Sources */,
+				7EF39FCF157111C20042CB84 /* AppDelegate.m in Sources */,
+				7EF39FD2157111C20042CB84 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7EF39FC7157111C20042CB84 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7EF39FC8157111C20042CB84 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7EF39FD3157111C20042CB84 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7EF39FD4157111C20042CB84 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7EF39FD6157111C20042CB84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7EF39FD7157111C20042CB84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7EF39FD9157111C20042CB84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NHSBugs/NHSBugs-Prefix.pch";
+				INFOPLIST_FILE = "NHSBugs/NHSBugs-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7EF39FDA157111C20042CB84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NHSBugs/NHSBugs-Prefix.pch";
+				INFOPLIST_FILE = "NHSBugs/NHSBugs-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7EF39FB4157111C10042CB84 /* Build configuration list for PBXProject "NHSBugs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EF39FD6157111C20042CB84 /* Debug */,
+				7EF39FD7157111C20042CB84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7EF39FD8157111C20042CB84 /* Build configuration list for PBXNativeTarget "NHSBugs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EF39FD9157111C20042CB84 /* Debug */,
+				7EF39FDA157111C20042CB84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7EF39FB1157111C10042CB84 /* Project object */;
+}
