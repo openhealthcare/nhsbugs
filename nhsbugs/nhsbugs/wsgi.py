@@ -14,7 +14,9 @@ framework.
 
 """
 import os
+import sys
 
+sys.path.append('/var/altwww/nhsbugs/nhsbugs/nhsbugs')
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "nhsbugs.settings")
 
 # This application object is used by any WSGI server configured to use this
