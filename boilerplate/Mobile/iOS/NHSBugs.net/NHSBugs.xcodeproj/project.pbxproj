@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E46F01515711842003DBF39 /* GetLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E46F01315711842003DBF39 /* GetLocation.m */; };
+		7E46F01615711842003DBF39 /* GetLocation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E46F01415711842003DBF39 /* GetLocation.xib */; };
+		7E46F01915712001003DBF39 /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E46F01815712001003DBF39 /* location.png */; };
+		7E46F01B15712398003DBF39 /* manual_entry.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E46F01A15712398003DBF39 /* manual_entry.png */; };
 		7EF39FBF157111C20042CB84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EF39FBE157111C20042CB84 /* UIKit.framework */; };
 		7EF39FC1157111C20042CB84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EF39FC0157111C20042CB84 /* Foundation.framework */; };
 		7EF39FC3157111C20042CB84 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EF39FC2157111C20042CB84 /* CoreGraphics.framework */; };
@@ -18,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7E46F01215711842003DBF39 /* GetLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetLocation.h; sourceTree = "<group>"; };
+		7E46F01315711842003DBF39 /* GetLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetLocation.m; sourceTree = "<group>"; };
+		7E46F01415711842003DBF39 /* GetLocation.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GetLocation.xib; sourceTree = "<group>"; };
+		7E46F01815712001003DBF39 /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location.png; sourceTree = "<group>"; };
+		7E46F01A15712398003DBF39 /* manual_entry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = manual_entry.png; sourceTree = "<group>"; };
 		7EF39FBA157111C20042CB84 /* NHSBugs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NHSBugs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EF39FBE157111C20042CB84 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7EF39FC0157111C20042CB84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -83,6 +92,9 @@
 				7EF39FD1157111C20042CB84 /* ViewController.m */,
 				7EF39FD3157111C20042CB84 /* ViewController.xib */,
 				7EF39FC5157111C20042CB84 /* Supporting Files */,
+				7E46F01215711842003DBF39 /* GetLocation.h */,
+				7E46F01315711842003DBF39 /* GetLocation.m */,
+				7E46F01415711842003DBF39 /* GetLocation.xib */,
 			);
 			path = NHSBugs;
 			sourceTree = "<group>";
@@ -90,6 +102,8 @@
 		7EF39FC5157111C20042CB84 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7E46F01A15712398003DBF39 /* manual_entry.png */,
+				7E46F01815712001003DBF39 /* location.png */,
 				7EF39FC6157111C20042CB84 /* NHSBugs-Info.plist */,
 				7EF39FC7157111C20042CB84 /* InfoPlist.strings */,
 				7EF39FCA157111C20042CB84 /* main.m */,
@@ -150,6 +164,9 @@
 			files = (
 				7EF39FC9157111C20042CB84 /* InfoPlist.strings in Resources */,
 				7EF39FD5157111C20042CB84 /* ViewController.xib in Resources */,
+				7E46F01615711842003DBF39 /* GetLocation.xib in Resources */,
+				7E46F01915712001003DBF39 /* location.png in Resources */,
+				7E46F01B15712398003DBF39 /* manual_entry.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +180,7 @@
 				7EF39FCB157111C20042CB84 /* main.m in Sources */,
 				7EF39FCF157111C20042CB84 /* AppDelegate.m in Sources */,
 				7EF39FD2157111C20042CB84 /* ViewController.m in Sources */,
+				7E46F01515711842003DBF39 /* GetLocation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +290,7 @@
 				7EF39FDA157111C20042CB84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
