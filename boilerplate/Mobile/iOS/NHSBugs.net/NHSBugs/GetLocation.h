@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface GetLocation : UIViewController
-
+#import "CoreLocation/CoreLocation.h"
+@class ViewController;
+@interface GetLocation : UIViewController<CLLocationManagerDelegate>{
+    CLLocationManager *locationManager;
+    ViewController *menu;
+}
+@property(nonatomic, retain) ViewController *menu;
 @end

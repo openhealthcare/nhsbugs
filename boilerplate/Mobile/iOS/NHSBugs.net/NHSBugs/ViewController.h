@@ -14,5 +14,7 @@
     NSMutableArray *dummyarray;
     GetLocation *grabLocation;
 }
-
+@property(nonatomic, retain) NSString *autoLongitude;
+@property(nonatomic, retain) NSString *autoLatitude;
+-(void)autoLocated:(id)sender;
 @end
