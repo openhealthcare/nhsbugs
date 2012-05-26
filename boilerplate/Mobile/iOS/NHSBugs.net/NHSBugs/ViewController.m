@@ -10,7 +10,7 @@
 #import "GetLocation.h"
 
 @implementation ViewController
-
+@synthesize autoLatitude, autoLongitude;
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -33,12 +33,12 @@
     if(grabLocation == nil){
     grabLocation = [[GetLocation alloc] initWithNibName:@"GetLocation" bundle:[NSBundle mainBundle]];
     }
-    CGFloat yaxis = 0;
-    CGFloat width = self.frame.size.width;
-    CGFloat height = self.frame.size.height;
-    CGRect frame = CGRectMake(0, yaxis, width, height);
+    CGFloat width = 250.0f;
+    CGFloat height = 204.0f;
+    CGRect frame = CGRectMake(((self.view.frame.size.width - width) / 2), ((self.view.frame.size.height - height) /2), width, height);
     grabLocation.view.frame = frame;
-    [self insertSubview:grabLocation.view aboveSubview:self.];
+    grabLocation.menu = self;
+    [self.view addSubview:grabLocation.view];
 }
 
 - (void)viewDidUnload
@@ -70,6 +70,21 @@
    
     cell.textLabel.text = [dummyarray objectAtIndex:storyIndex];
     return cell;
+}
+
+-(void)autoLocated:(id)sender{
+    [grabLocation.view removeFromSuperview];
+    [grabLocation release];
+    [dummyarray addObject:autoLatitude];
+    [dummyarray addObject:autoLongitude];
+    [searchtable reloadData];
+    grabLocation = nil;
+}
+
+-(void)manualEntry:(id)sender{
+    [grabLocation.view removeFromSuperview];
+    [grabLocation release];
+    grabLocation = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated
