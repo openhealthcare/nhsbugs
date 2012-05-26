@@ -6,6 +6,8 @@
 
 <h1>{{ hospital.name }}</h1>
 
+<a href="{% url report_bug hospital_slug=hospital.slug %}">Report a bug!</a><br/>
+
 {% for bug in bugs %}
     {{ bug.title }}</br>
 {% endfor %}
