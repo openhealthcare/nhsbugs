@@ -3,7 +3,7 @@ from django.conf import settings
 from django.contrib import admin
 from django.conf.urls.defaults import *
 from tastypie.api import Api
-
+from django.views.generic.simple import direct_to_template
 from facilities.api import HospitalResource
 
 admin.autodiscover()
@@ -16,6 +16,7 @@ urlpatterns = patterns('',
     url(r'^$', 'nhsbugs.views.home', name='home'),
     url(r'^login/$', 'nhsbugs.views.login_view', name='login'),
     url(r'^logout/$', 'nhsbugs.views.logout_view', name='login'),
+    url(r'^about/$', direct_to_template, {'template': 'about.html'}),
 
     url(r'^bugs/', include('bugs.urls')),
     url(r'^hospital/', include('facilities.urls_hospitals')),
