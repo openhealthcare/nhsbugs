@@ -5,6 +5,6 @@
 {% block content %}
 
 {% for sha in shas %}
-    <a href="{% url 'view_sha' sha.slug %}"><br/>
+    <a href="{% url view_sha sha.slug %}">{{ sha.name }}</a><br/>
 {% endfor %}
 {% endblock %}
