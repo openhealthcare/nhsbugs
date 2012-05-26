@@ -6,20 +6,23 @@ from django.shortcuts import render_to_response, redirect, get_object_or_404, re
 from django.template import RequestContext
 
 from models import SHA, Hospital
+from bugs.models import Bug
 
 def list_hospitals(request):
     hospitals = Hospital.objects.all()
     return render_to_response('facilities/hospital_list.html',
                                {
-                                 'hospitals': hospital
+                                 'hospitals': hospitals
                                },
                                context_instance=RequestContext(request))
 
 def view_hospital(request, slug):
     hospital = get_object_or_404( Hospital, slug=slug)
+    bugs = Bug.objects.filter(hospital=hospital).all()
     return render_to_response('facilities/hospital_view.html',
                                {
-                                  "hospital": hospital
+                                  "hospital": hospital,
+                                  "bugs": bugs
                                },
                                context_instance=RequestContext(request))
 

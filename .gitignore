@@ -9,3 +9,6 @@ lib/
 readline-6.2.2-py2.7-macosx-10.7-intel.egg/
 .Python
 *.db
+nhsbugs/static/uploads/*.gif
+nhsbugs/static/uploads/*.jpg
+nhsbugs/static/uploads/*.png

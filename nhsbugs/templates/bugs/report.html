@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Report a bug!</h1>
+
+{% if form.errors %}
+    {{ form.errors }}
+{% endif %}
+
+<form action="." method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.title.label }}
+    {{ form.title }}<br/>
+
+    {{ form.description.label }}
+    {{ form.description }}<br/>
+
+    {{ form.hospital.label }}
+    {{ form.hospital }}<br/>
+
+    {{ form.pic.label }}
+    {{ form.pic }}<br/>
+
+    <input type='Submit' value="Report it!"></input>
+</form>
+
+
+{% endblock %}

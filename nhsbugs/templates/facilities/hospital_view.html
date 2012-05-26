@@ -3,5 +3,11 @@
 
 
 {% block content %}
-A specific hospital
+
+<h1>{{ hospital.name }}</h1>
+
+{% for bug in bugs %}
+    {{ bug.title }}</br>
+{% endfor %}
+
 {% endblock %}
