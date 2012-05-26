@@ -9,7 +9,7 @@
 <a href="{% url report_bug hospital_slug=hospital.slug %}">Report a bug!</a><br/>
 
 {% for bug in bugs %}
-    {{ bug.title }}</br>
+    <a href="{% url view_bug slug=bug.slug %}">{{ bug.title }}</a></br>
 {% endfor %}
 
 {% endblock %}
