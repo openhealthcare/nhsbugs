@@ -8,7 +8,7 @@ urlpatterns = patterns('',
     # url(r'^nhsbugs/', include('nhsbugs.foo.urls')),
 
     url(r'^bug/', include('bugs.urls')),
-    url(r'^hospital/', include('bugs.urls')),
+    url(r'^facilities/', include('facilities.urls')),
 
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
