@@ -6,6 +6,13 @@
 
 <h1>{{ bug.title }}</h1>
 
+{{ votes_up }} | {{ votes_down }} | {{ votes_total }}
+User_Voted: {{ user_vote }}
+<br/>
+<a href="{% url vote_bug slug=bug.slug score=1%}">Vote UP</a><br/>
+<a href="{% url vote_bug slug=bug.slug score=-1%}">Vote Down</a><br/>
+
+
 {% if bug.pic %}
 <img src="{{ MEDIA_URL }}/{{bug.pic}}" width="100" height="100"/>
 {% else %}

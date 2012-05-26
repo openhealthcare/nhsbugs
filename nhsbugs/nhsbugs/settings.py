@@ -122,9 +122,11 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'django.contrib.admindocs',
+    'django.contrib.comments',
     'facilities',
     'bugs',
     'nhsbugs',
+    'voting',
 )
 
 # A sample logging configuration. The only tangible logging
