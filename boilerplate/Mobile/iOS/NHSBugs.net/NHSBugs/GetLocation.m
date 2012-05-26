@@ -39,6 +39,28 @@
     locationManager.distanceFilter = kCLDistanceFilterNone; // whenever we move
     locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters; // 100 m
     [locationManager startUpdatingLocation];
+    
+    
+    
+    /*
+     
+     Need to handle error getting location, add code to change icon to a tick and more usable long and lat sending.
+     
+     - on pressing manual entry it should take user to search box and the search box uses various fields.
+     
+     
+     */
+    
+    
+    
+    
+    
+    
+}
+
+-(IBAction)manual:(id)sender{
+    [menu manualEntry:nil];
+    
 }
 
 - (void)locationManager:(CLLocationManager *)manager
@@ -62,7 +84,25 @@
     menu.autoLongitude= longt;
     //NSLog(@"Longitude: %@",longt);
     [locationManager stopUpdatingLocation];
-    [menu autoLocated:nil];
+    UIImage *image = [UIImage imageNamed: @"location_found.png"];
+    [logo setImage:image];
+    
+    [NSTimer scheduledTimerWithTimeInterval:1.0
+                                     target:menu
+                                   selector:@selector(autoLocated:)
+                                   userInfo:nil
+                                    repeats:NO];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
+    [locationManager stopUpdatingLocation];
+    UIImage *image = [UIImage imageNamed: @"location_notfound.png"];
+    [logo setImage:image];
+    [NSTimer scheduledTimerWithTimeInterval:1.0
+                                     target:menu
+                                   selector:@selector(manualEntry:)
+                                   userInfo:nil
+                                    repeats:NO];
 }
 
 - (void)viewDidUnload

@@ -17,4 +17,5 @@
 @property(nonatomic, retain) NSString *autoLongitude;
 @property(nonatomic, retain) NSString *autoLatitude;
 -(void)autoLocated:(id)sender;
+-(void)manualEntry:(id)sender;
 @end

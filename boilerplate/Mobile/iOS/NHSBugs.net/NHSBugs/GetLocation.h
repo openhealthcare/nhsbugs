@@ -12,6 +12,10 @@
 @interface GetLocation : UIViewController<CLLocationManagerDelegate>{
     CLLocationManager *locationManager;
     ViewController *menu;
+    IBOutlet UIButton *manual;
+    IBOutlet UIImageView *logo;
 }
 @property(nonatomic, retain) ViewController *menu;
+
+-(IBAction)manual:(id)sender;
 @end

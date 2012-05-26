@@ -81,6 +81,12 @@
     grabLocation = nil;
 }
 
+-(void)manualEntry:(id)sender{
+    [grabLocation.view removeFromSuperview];
+    [grabLocation release];
+    grabLocation = nil;
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
