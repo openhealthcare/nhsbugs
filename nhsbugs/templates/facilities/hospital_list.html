@@ -3,5 +3,11 @@
 
 
 {% block content %}
-List of hospitals
+<h1>List of hospitals</h1>
+
+
+{% for hospital in hospitals %}
+    <a href="/hospital/{{ hospital.slug }}">{{ hospital.name }}</a><br/>
+{% endfor %}
+
 {% endblock %}
