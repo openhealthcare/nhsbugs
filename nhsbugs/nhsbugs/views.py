@@ -7,7 +7,6 @@ from django.template import RequestContext
 
 
 def home(request):
-    # render(request, template[, dictionary][, context_instance][, content_type][, status][, current_app])
     return render_to_response('home.html',
                                {},
                                context_instance=RequestContext(request))

@@ -1,8 +1,13 @@
 from django.db import models
 from django.contrib.auth.models import User
+from autoslug import AutoSlugField
 
 class Bug(models.Model):
-    summary = models.CharField(max_length=120, blank=False, null=False)
+    slug = AutoSlugField(populate_from='title')
+    title = models.CharField(max_length=120, blank=False, null=False)
     description = models.TextField(blank=False, null=False)
-    reporter = models.ForeignKeyField(User)
+    pic = models.FileField(upload_to='uploads/')
+
+    reporter = models.ForeignKey(User)
     report_date = models.DateTimeField(auto_now=False, auto_now_add=True)
+    hospital = models.ForeignKey( "facilities.Hospital" )
