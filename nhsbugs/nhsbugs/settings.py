@@ -51,9 +51,11 @@ USE_TZ = True
 
 # MEDIA
 MEDIA_ROOT = os.path.join( PROJECT_ROOT, "../static" )
-MEDIA_URL = 'media/'
+MEDIA_URL = '/media/'
 STATIC_ROOT = ''
 STATIC_URL = '/static/'
+
+AUTH_PROFILE_MODULE = 'nhsbugs.UserProfile'
 
 STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
@@ -108,7 +110,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'django.contrib.admindocs',
-    'facilities'
+    'facilities',
+    'nhsbugs',
 )
 
 # A sample logging configuration. The only tangible logging
