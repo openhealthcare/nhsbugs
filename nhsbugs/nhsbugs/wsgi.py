@@ -17,7 +17,7 @@ import os
 import sys
 
 sys.path.append('/var/altwww/nhsbugs/nhsbugs/nhsbugs')
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "nhsbugs.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "nhsbugs.settings_live")
 
 # This application object is used by any WSGI server configured to use this
 # file. This includes Django's development server, if the WSGI_APPLICATION
