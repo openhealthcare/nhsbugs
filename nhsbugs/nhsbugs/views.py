@@ -16,7 +16,9 @@ def home(request):
     else:
         top_bugs = Bug.objects.order_by('title')[:10]
     return render_to_response('home.html',
-                               {},
+                               {
+                               'top_bugs': top_bugs
+                               },
                                context_instance=RequestContext(request))
 
 def logout_view(request):

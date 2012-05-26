@@ -31,12 +31,10 @@
         <a href="{% url report_bug hospital_slug=hospital.slug %}">Report a bug!</a>
     </p>
 
-    <ul class="bugs">
+    <section class="bugsList">
     {% for bug in bugs %}
-        <li>
-            <a href="{% url view_bug slug=bug.slug %}">{{ bug.title|safe }}</a>
-        </li>
+        {% include 'bugs/detail.html' %}
     {% endfor %}
-    </ul>
+    </section>
 </article>
 {% endblock %}
