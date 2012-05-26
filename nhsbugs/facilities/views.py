@@ -9,7 +9,7 @@ from models import SHA, Hospital
 from bugs.models import Bug
 
 def list_hospitals(request):
-    hospitals = Hospital.objects.all()
+    hospitals = Hospital.objects.order_by('name').all()
     return render_to_response('facilities/hospital_list.html',
                                {
                                  'hospitals': hospitals

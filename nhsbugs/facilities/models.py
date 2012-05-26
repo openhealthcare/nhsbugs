@@ -2,7 +2,7 @@ from django.db import models
 from autoslug import AutoSlugField
 
 class SHA(models.Model):
-    slug = AutoSlugField(populate_from='name')
+    slug = AutoSlugField(populate_from='name', unique=True)
     code = models.CharField(max_length=10, null=False, blank=False)
     name = models.CharField(max_length=100, null=False, blank=False)
     it_code  = models.CharField(max_length=32, null=True, blank=True)
@@ -23,7 +23,8 @@ class SHA(models.Model):
     close_date = models.DateTimeField(null=True, blank=True)
 
 class Hospital(models.Model):
-    slug = AutoSlugField(populate_from='name')
+    slug = AutoSlugField(populate_from='name', unique=True)
+
     code = models.CharField(max_length=10, null=False, blank=False)
     name = models.CharField(max_length=100, null=False, blank=False)
     it_code  = models.CharField(max_length=32, null=True, blank=True)
