@@ -197,4 +197,29 @@ td { vertical-align: top; }
 /* NHS Bugs Design & Layout */
 body {
     font-family: 'open sans', sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+header {
+    border-bottom: 2px solid #000;
+}
+header h1, header nav, .main {
+    max-width: 940px;
+    padding: 10px;
+    margin: 0 auto;
+}
+.main:after {
+    content: '';
+    width: 0;
+    height: 0;
+    clear: both;
+    display: block;
+}
+.main>section {
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    padding: 10px;
+    margin: 0;
 }
