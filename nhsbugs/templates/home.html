@@ -1,13 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-<p>Homepage!</p>
 
 <section class="popular">
     <h1>Popular Bugs</h1>
     <ul class="bugList">
         <li>
-            I'm a bug!
+            <a href="#">I'm a bug!</a>
         </li>
     </ul>
 </section>
@@ -18,7 +17,8 @@
         <label for="title">Title</label>
         <input type="text" id="title" name="title" />
         <label for="description">Description</label>
-        <textarea id="description" name="description"></textarea> 
+        <textarea id="description" name="description"></textarea>
+        <input type="submit" value="Submit Bug" />
     </form>
 </section>
 {% endblock %}
