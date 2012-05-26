@@ -5,7 +5,8 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^$', 'nhsbugs.views.home', name='home'),
-    # url(r'^nhsbugs/', include('nhsbugs.foo.urls')),
+    url(r'^login/$', 'nhsbugs.views.login_view', name='login'),
+    url(r'^logout/$', 'nhsbugs.views.logout_view', name='login'),
 
     url(r'^bugs/', include('bugs.urls')),
     url(r'^hospital/', include('facilities.urls_hospitals')),
@@ -13,6 +14,8 @@ urlpatterns = patterns('',
 
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
+
+
 )
 
 

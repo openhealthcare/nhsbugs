@@ -22,6 +22,9 @@ class SHA(models.Model):
     open_date = models.DateTimeField(null=True, blank=True)
     close_date = models.DateTimeField(null=True, blank=True)
 
+    def __unicode__(self):
+        return self.name
+
 class Hospital(models.Model):
     slug = AutoSlugField(populate_from='name', unique=True)
 
@@ -41,4 +44,7 @@ class Hospital(models.Model):
 
     open_date = models.DateTimeField(null=True, blank=True)
     close_date = models.DateTimeField(null=True, blank=True)
+
+    def __unicode__(self):
+        return self.name
 

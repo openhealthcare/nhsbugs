@@ -51,16 +51,26 @@ USE_TZ = True
 
 # MEDIA
 MEDIA_ROOT = os.path.join( PROJECT_ROOT, "../static" )
-MEDIA_URL = '/media/'
+MEDIA_URL = '/media'
 STATIC_ROOT = ''
 STATIC_URL = '/static/'
 
 AUTH_PROFILE_MODULE = 'nhsbugs.UserProfile'
 
+LOGIN_URL = '/login'
+LOGOUT_URL = '/logout'
+
+
 STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+)
+
+
+AUTHENTICATION_BACKENDS = (
+    'nhsbugs.backends.EmailOrUsernameModelBackend',
+    'django.contrib.auth.backends.ModelBackend'
 )
 
 # List of finder classes that know how to find static files in
