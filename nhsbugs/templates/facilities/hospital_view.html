@@ -27,10 +27,16 @@
         {% endif %}
     </p>
 
-    <a href="{% url report_bug hospital_slug=hospital.slug %}">Report a bug!</a><br/>
+    <p>
+        <a href="{% url report_bug hospital_slug=hospital.slug %}">Report a bug!</a>
+    </p>
 
+    <ul class="bugs">
     {% for bug in bugs %}
-        {{ bug.title|safe }}</br>
+        <li>
+            <a href="{% url view_bug slug=bug.slug %}">{{ bug.title|safe }}</a>
+        </li>
     {% endfor %}
+    </ul>
 </article>
 {% endblock %}

@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+@class GetLocation;
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UISearchBarDelegate>{
+    IBOutlet UITableView *searchtable;
+    NSMutableArray *dummyarray;
+    GetLocation *grabLocation;
+}
 
 @end

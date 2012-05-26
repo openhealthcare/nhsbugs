@@ -6,9 +6,15 @@ from django.shortcuts import render_to_response, redirect, get_object_or_404, re
 from django.template import RequestContext
 from django.contrib.auth import authenticate, login, logout
 
+from bugs.models import Bug
 from forms import LoginForm
 
 def home(request):
+    top_bugs = Bug.objects
+    if top_bugs.count < 10:
+        top_bugs = Bug.objects.all()
+    else:
+        top_bugs = Bug.objects.order_by('title')[:10]
     return render_to_response('home.html',
                                {},
                                context_instance=RequestContext(request))
