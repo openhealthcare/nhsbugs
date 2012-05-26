@@ -8,22 +8,7 @@
     {{ form.errors }}
 {% endif %}
 
-<form action="" method="POST" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ form.title.label }}
-    {{ form.title }}<br/>
-
-    {{ form.description.label }}
-    {{ form.description }}<br/>
-
-    {{ form.description.hospital }}
-    {{ form.hospital }}<br/>
-
-    {{ form.pic.label }}
-    {{ form.pic }}<br/>
-
-    <input type='Submit' value="Report it!"></input>
-</form>
+{% include "bugs/form.html" with hospitalKnown=True %}
 
 
 {% endblock %}
