@@ -4,4 +4,23 @@
 
 {% block content %}
 Homepage!
+
+<section class="popular">
+    <h1>Popular Bugs</h1>
+    <ul class="bugList">
+        <li>
+            I'm a bug!
+        </li>
+    </ul>
+</section>
+
+<section class="newBug">
+    <h1>Submit a New Bug</h1>
+    <form action="/bug/submit">
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" />
+        <label for="description">Description</label>
+        <textarea id="description" name="description"></textarea> 
+    </form>
+</section>
 {% endblock %}
