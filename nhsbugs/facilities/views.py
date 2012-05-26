@@ -33,6 +33,7 @@ def list_shas(request):
 
 def view_sha(request, slug):
     sha = get_object_or_404( SHA, slug=slug)
+    hospitals = Hospital.objects.filter(sha_code=sha.code).all()
     return render_to_response('facilities/sha_view.html',
                                {
                                 "sha": sha

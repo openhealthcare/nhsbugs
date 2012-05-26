@@ -4,5 +4,9 @@
 
 {% block content %}
 
-SHA page for {% sha.name %}
+SHA page for {{ sha.name }}
+
+{% for h in hospitals %}
+    <a href="{% url view_hospital h.slug %}">{{ h.name }}</a><br/>
+{% endfor %}
 {% endblock %}
