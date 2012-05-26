@@ -287,42 +287,42 @@ footer {
     color: #666666;
 }
 
-.popular article {
+.bugsList article {
     padding: 10px 0;
     overflow: hidden;
     border-bottom: 1px solid #ccc;
 }
-.popular article:last-child {
+.bugsList article:last-child {
     border-bottom: none;
 }
-.popular article .thumbnail {
+.bugsList article .thumbnail {
     height: 50px;
     float: left;
     margin-right: 20px;
 }
-.popular article hgroup {
+.bugsList article hgroup {
     clear: right;
     overflow: hidden;
 }
-.popular article hgroup h2 {
+.bugsList article hgroup h2 {
     float: left;
     font-size: 1em;
     font-weight: normal;
     margin: 0 0 0 10px;
     color: #888;
 }
-.popular article h1 {
+.bugsList article h1 {
     margin: 0;
     float: left;
 }
-.popular article time {
+.bugsList article time {
     float: right;
     float: right;
 }
-.popular .summary {
+.bugsList .summary {
     margin-bottom: 10px;
 }
-.popular .more {
+.bugsList .more {
     float: right;
     font-size: 0.8em;
 }

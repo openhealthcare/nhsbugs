@@ -3,14 +3,19 @@
 
 
 {% block content %}
+<article>
+    <h1>{{ bug.title }}</h1>
 
-<h1>{{ bug.title }}</h1>
+    {% if bug.pic %}
+    <img src="{{ MEDIA_URL }}/{{bug.pic}}" width="100" height="100"/>
+    {% else %}
+    <p>--No picture--</p>
+    {% endif %}
 
-{% if bug.pic %}
-<img src="{{ MEDIA_URL }}/{{bug.pic}}" width="100" height="100"/>
-{% else %}
-No picture
-{% endif %}
+<p>
 {{ bug.description }}
+</p>
+
+</article>
 
 {% endblock %}
