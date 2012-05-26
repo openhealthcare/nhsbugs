@@ -51,11 +51,12 @@ USE_TZ = True
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
 MEDIA_ROOT = os.path.join( PROJECT_ROOT, "../static" )
+print MEDIA_ROOT
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
-MEDIA_URL = ''
+MEDIA_URL = 'media/'
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
@@ -109,6 +110,11 @@ TEMPLATE_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
     os.path.join( PROJECT_ROOT, "../templates" )
+)
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    "django.core.context_processors.media",
+    "django.contrib.auth.context_processors.auth",
 )
 
 INSTALLED_APPS = (
