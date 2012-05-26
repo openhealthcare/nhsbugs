@@ -5,9 +5,9 @@
 <section class="popular">
     <h1>Popular Bugs</h1>
 
-{% for bug in bug_list %}
+{% for bug in bugs %}
     <article>
-        <img class="thumbnail" src="{{ bug.image_src }}" />
+        <img class="thumbnail" src="{{ MEDIA_URL }}img/{{ bug.image_filename }}" />
         
         <hgroup>
             <h1>{{ bug.title }}</h1>
@@ -17,13 +17,13 @@
         
         <p class="summary">{{ bug.summary }}</p>
         
-        <a href="{{ MEDIA_URL }}bug/{{ bug.slug }}">More information</a>
+        <a href="{% url view_bug slug=bug.slug %}">More information</a>
     </article>
 {% endfor %}
 
     <!-- placeholder data. PLEASE DELETE -->
     <article>
-        <img class="thumbnail" src="http://iloveubuntu.net/sites/default/files/field/image/gwibber%20and%20kazam%201.png" />
+        <img class="thumbnail" src="{{ MEDIA_URL }}/img/sweating.png" />
         
         <hgroup>
             <h1>Sweating insect</h1>
@@ -33,11 +33,11 @@
         
         <p class="summary">I saw a sweating bug. On Google Images</p>
         
-        <a href="{{ MEDIA_URL }}bug/sweating-bug" class="more">more information</a>
+        <a href="{% url view_bug slug='sweating-insect' %}" class="more">more information</a>
     </article>
     
     <article>
-        <img class="thumbnail" src="http://iloveubuntu.net/sites/default/files/field/image/gwibber%20and%20kazam%201.png" />
+        <img class="thumbnail" src="{{ MEDIA_URL }}/img/sweating.png" />
         
         <hgroup>
             <h1>Another sweating insect</h1>
@@ -47,7 +47,7 @@
         
         <p class="summary">It happened again!</p>
         
-        <a href="{{ MEDIA_URL }}bug/sweating-bug" class="more">more information</a>
+        <a href="{% url view_bug slug='another-sweating-insect' %}" class="more">more information</a>
     </article>
 </section>
 
