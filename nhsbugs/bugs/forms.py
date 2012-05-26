@@ -13,10 +13,9 @@ class BugForm(forms.ModelForm):
 
     title = forms.CharField(label="A short summary",required=True)
     description = forms.CharField(label="What's the problem?", widget=forms.Textarea(), required=True)
-    hospital = forms.ModelChoiceField(required=False, queryset=Hospital.objects.order_by("name"))
     pic = forms.FileField(required=False)
 
     class Meta:
         model = Bug
-        fields = ("title","description","hospital","pic")
+        fields = ("title","description","pic")
 
