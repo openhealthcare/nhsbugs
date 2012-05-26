@@ -16,6 +16,9 @@ class SHA(models.Model):
     address5 = models.CharField(max_length=64, null=True, blank=True)
     postcode = models.CharField(max_length=16, null=True, blank=True)
 
+    lat = models.CharField(max_length=16, null=True, blank=True)
+    lng = models.CharField(max_length=16, null=True, blank=True)
+
     open_date = models.DateTimeField(null=True, blank=True)
     close_date = models.DateTimeField(null=True, blank=True)
 
@@ -31,6 +34,9 @@ class Hospital(models.Model):
     address4 = models.CharField(max_length=64, null=True, blank=True)
     address5 = models.CharField(max_length=64, null=True, blank=True)
     postcode = models.CharField(max_length=16, null=True, blank=True)
+
+    lat = models.CharField(max_length=16, null=True, blank=True)
+    lng = models.CharField(max_length=16, null=True, blank=True)
 
     open_date = models.DateTimeField(null=True, blank=True)
     close_date = models.DateTimeField(null=True, blank=True)
