@@ -6,5 +6,4 @@ from views import list_hospitals, view_hospital
 urlpatterns = patterns('',
     url(r'^$', list_hospitals, name='list_hospitals'),
     url(r'^(?P<slug>[\w-]+)$', view_hospital, name='view_hospital'),
-    #url(r'^hospital/(?P<slug>[\w-]+)/report$', view_hospital_bugs, name='view_hospital_bugs'),
 )
