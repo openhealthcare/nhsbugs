@@ -4,32 +4,34 @@
 
 {% block content %}
 <article>
-    <h1>{{ hospital.name|safe }}</h1>
-    <p class="address">
-        {{ hospital.address1|safe }}
-        {% if hospital.address2 %}
-            , {{ hospital.address2|safe }}
-        {% endif %}
-        {% if hospital.address3 %}
-            , {{ hospital.address3|safe }}
-        {% endif %}
-        {% if hospital.address4 %}
-            , {{ hospital.address4|safe }}
-        {% endif %}
-        {% if hospital.address5 %}
-            , {{ hospital.address5|safe }}
-        {% endif %}
-        {% if hospital.postcode %}
-            , {{ hospital.postcode|safe }}
-        {% endif %}
-        {% if hospital.lat and hospital.lng %}    
-        (<a href="https://maps.google.com/?ie=UTF8&hq=&ll={{ hospital.lat }},{{ hospital.lng }}&z=17" target="_blank">See map</a>)
-        {% endif %}
-    </p>
+    <section class="details">
+        <h1>{{ hospital.name|safe }}</h1>
+        <p class="address">
+            {{ hospital.address1|safe }}
+            {% if hospital.address2 %}
+                , {{ hospital.address2|safe }}
+            {% endif %}
+            {% if hospital.address3 %}
+                , {{ hospital.address3|safe }}
+            {% endif %}
+            {% if hospital.address4 %}
+                , {{ hospital.address4|safe }}
+            {% endif %}
+            {% if hospital.address5 %}
+                , {{ hospital.address5|safe }}
+            {% endif %}
+            {% if hospital.postcode %}
+                , {{ hospital.postcode|safe }}
+            {% endif %}
+            {% if hospital.lat and hospital.lng %}    
+            (<a href="https://maps.google.com/?ie=UTF8&hq=&ll={{ hospital.lat }},{{ hospital.lng }}&z=17" target="_blank">See map</a>)
+            {% endif %}
+        </p>
 
-    <p>
-        <a href="{% url report_bug hospital_slug=hospital.slug %}">Report a bug!</a>
-    </p>
+        <p>
+            <a href="{% url report_bug hospital_slug=hospital.slug %}">Report a bug!</a>
+        </p>
+    </section>
 
     <section class="bugsList">
     {% for bug in bugs %}
