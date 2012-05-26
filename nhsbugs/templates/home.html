@@ -4,11 +4,51 @@
 
 <section class="popular">
     <h1>Popular Bugs</h1>
-    <ul class="bugList">
-        <li>
-            <a href="#">I'm a bug!</a>
-        </li>
-    </ul>
+
+{% for bug in bugs %}
+    <article>
+        <img class="thumbnail" src="{{ MEDIA_URL }}img/{{ bug.image_filename }}" />
+        
+        <hgroup>
+            <h1>{{ bug.title }}</h1>
+            <h2>{{ bug.votes }} votes</h2>
+            <time pubdate>{{ bug.date_submitted }}</time>
+        </hgroup>
+        
+        <p class="summary">{{ bug.summary }}</p>
+        
+        <a href="{% url view_bug slug=bug.slug %}">More information</a>
+    </article>
+{% endfor %}
+
+    <!-- placeholder data. PLEASE DELETE -->
+    <article>
+        <img class="thumbnail" src="{{ MEDIA_URL }}/img/sweating.png" />
+        
+        <hgroup>
+            <h1>Sweating insect</h1>
+            <h2>42 votes</h2>
+            <time pubdate>26th May</time>
+        </hgroup>
+        
+        <p class="summary">I saw a sweating bug. On Google Images</p>
+        
+        <a href="{% url view_bug slug='sweating-insect' %}" class="more">more information</a>
+    </article>
+    
+    <article>
+        <img class="thumbnail" src="{{ MEDIA_URL }}/img/sweating.png" />
+        
+        <hgroup>
+            <h1>Another sweating insect</h1>
+            <h2>42 votes</h2>
+            <time pubdate>26th May</time>
+        </hgroup>
+        
+        <p class="summary">It happened again!</p>
+        
+        <a href="{% url view_bug slug='another-sweating-insect' %}" class="more">more information</a>
+    </article>
 </section>
 
 <section class="newBug">

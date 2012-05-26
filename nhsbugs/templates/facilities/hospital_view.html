@@ -3,13 +3,40 @@
 
 
 {% block content %}
+<article>
+    <h1>{{ hospital.name|safe }}</h1>
+    <p class="address">
+        {{ hospital.address1|safe }}
+        {% if hospital.address2 %}
+            , {{ hospital.address2|safe }}
+        {% endif %}
+        {% if hospital.address3 %}
+            , {{ hospital.address3|safe }}
+        {% endif %}
+        {% if hospital.address4 %}
+            , {{ hospital.address4|safe }}
+        {% endif %}
+        {% if hospital.address5 %}
+            , {{ hospital.address5|safe }}
+        {% endif %}
+        {% if hospital.postcode %}
+            , {{ hospital.postcode|safe }}
+        {% endif %}
+        {% if hospital.lat and hospital.lng %}    
+        (<a href="https://maps.google.com/?ie=UTF8&hq=&ll={{ hospital.lat }},{{ hospital.lng }}&z=17" target="_blank">See map</a>)
+        {% endif %}
+    </p>
 
-<h1>{{ hospital.name }}</h1>
+    <p>
+        <a href="{% url report_bug hospital_slug=hospital.slug %}">Report a bug!</a>
+    </p>
 
-<a href="{% url report_bug hospital_slug=hospital.slug %}">Report a bug!</a><br/>
-
-{% for bug in bugs %}
-    <a href="{% url view_bug slug=bug.slug %}">{{ bug.title }}</a></br>
-{% endfor %}
-
+    <ul class="bugs">
+    {% for bug in bugs %}
+        <li>
+            <a href="{% url view_bug slug=bug.slug %}">{{ bug.title|safe }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+</article>
 {% endblock %}

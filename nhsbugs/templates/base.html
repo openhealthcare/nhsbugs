@@ -24,8 +24,9 @@
     {% endblock %}
     <nav>
         <ul>
-            <li class="selected"><a>Home</a></li>
-            <li class="selected"><a>Submit a bug</a></li>
+            <li class="home"><a href="{% url home %}">Home</a></li>
+            <li class="list_hospitals"><a href="{% url list_hospitals %}">Hospitals</a></li>
+            <li class=""><a href="">Submit a bug</a></li>
         </ul>
     </nav>
   </header>
