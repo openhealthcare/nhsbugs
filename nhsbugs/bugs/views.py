@@ -41,25 +41,27 @@ def vote_bug(request, slug, score):
     return HttpResponseRedirect("/bugs/view/%s" % bug.slug)
 
 @login_required
-def report_bug(request,hospital_slug):
-    hospital = get_object_or_404(Hospital, slug=hospital_slug)
+def report_bug(request,hospital_slug=None):
+    init_data = {}
+    try:
+        hospital = Hospital.objects.get(slug=hospital_slug)
+        init_data["hospital"] = hospital
+    except Hospital.DoesNotExist:
+        hospital = None
+
     form = BugForm(request.POST or None,
                    request.FILES or None,
-                   initial={"reporter":request.user,"hospital":hospital})
+                   initial=init_data)
     if request.method == 'POST':
         if form.is_valid():
             b = form.save(commit=False)
+            b.hospital = form.cleaned_data['hospital']
             b.reporter = request.user
-            b.hospital = hospital
             b.save()
             return HttpResponseRedirect("/bugs/view/" + b.slug)
     return render_to_response('bugs/report.html',
                                {
-                                "form": form
+                                "form": form,
+                                "hospitalKnown": not hospital is None
                                },
                                context_instance=RequestContext(request))
-
-
-"""
-
-"""
