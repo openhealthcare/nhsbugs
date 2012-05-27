@@ -19,10 +19,12 @@ def chunkIt(seq, num):
 
 def list_hospitals(request):
     hospitals_a, hospitals_b = chunkIt(Hospital.objects.order_by('name').all(), 2)
+    hospitals = Hospital.objects.order_by('name').all()
     return render_to_response('facilities/hospital_list.html',
                                {
                                  'hospitals_a': hospitals_a,
                                  'hospitals_b': hospitals_b,
+                                 'hospitals': hospitals
                                },
                                context_instance=RequestContext(request))
 
