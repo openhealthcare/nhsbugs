@@ -8,7 +8,7 @@
 </section>
 
 {% get_comment_list for bug as comment_list %}
-{% get_comment_count for bug as comment_count %}.
+{% get_comment_count for bug as comment_count %}
 <section class="comment">
 <p>There are {{comment_count}} comments</p>
 {% for comment in comment_list %}
@@ -17,7 +17,7 @@
     <p>
        {{ comment.comment }}
     </p>
-    <hr/>
+    <hr />
 {% endfor %}
 
 <h1>Leave a comment</h1>
