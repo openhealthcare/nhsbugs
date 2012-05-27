@@ -326,3 +326,46 @@ footer {
     float: right;
     font-size: 0.8em;
 }
+
+/* Forms */
+form label {
+    float: left;
+    text-align: right;
+    margin: 5px 10px 5px 5px;
+    padding: 5px 0;
+}
+form input {
+    height: 20px;
+    width: 148px;
+    padding: 5px;
+    margin: 5px 10px 5px 5px;
+}
+form input,
+form textarea {
+    float: left;
+    border-radius: 4px;
+}
+form textarea{
+    margin: 5px;
+    padding: 5px;
+}
+form select {
+    text-indent: 7px;
+    padding: 0;
+    width: 157px;
+    height: 30px;
+    margin: 5px;
+}
+input[type="submit"],
+input[type="button"],
+input[type="cancel"] {
+    clear: both;
+    float: right;
+    padding: 10px 5px;
+    background-color: #990000;
+    border-radius: 4px;
+    height: auto;
+    color: #ffffff;
+    border: none;
+}
+

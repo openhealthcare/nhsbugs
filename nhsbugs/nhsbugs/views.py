@@ -11,9 +11,11 @@ from voting.models import Vote
 from bugs.models import Bug
 from forms import LoginForm
 from bugs.forms import BugForm
+from facilities.models import Hospital
 
 def home(request):
     recent_bugs = Bug.objects.order_by('-update_date')
+    hospitals = Hospital.objects.all()
     form = BugForm(initial={"reporter":request.user})
     return render_to_response('home.html',
                                {

@@ -21,7 +21,6 @@ class Bug(models.Model):
     hospital = models.ForeignKey( "facilities.Hospital", related_name='bugs' )
     status = models.CharField(max_length=2, choices=STATUS_CHOICES, default='NF')
 
-    def get_score(self):
-        votes = Vote.objects.get_for_object(self)
-        return sum( [ x.direction for x in votes ] )
+    def get_vote_counts(self):
+        return Vote.objects.get_for_object(self).count()
 

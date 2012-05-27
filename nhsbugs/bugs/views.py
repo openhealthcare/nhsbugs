@@ -53,7 +53,9 @@ def report_bug(request,hospital_slug=None):
         init_data["hospital"] = hospital
     except Hospital.DoesNotExist:
         hospital = None
-
+    
+    hospitals = Hospital.objects.all()
+    
     form = BugForm(request.POST or None,
                    request.FILES or None,
                    initial=init_data)
