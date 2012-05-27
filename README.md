@@ -13,5 +13,5 @@ pip install -r requirements.txt
 ./manage.py runserver
 ```
 
-And then open your browser and point to 0.0.0.0:8000
+Next open your browser and point to 0.0.0.0:8000
 
