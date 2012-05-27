@@ -1,23 +1,26 @@
 <form action="/bugs/report/" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
-    {{ form.title.label }}
-    {{ form.title }}<br/>
+<<<<<<< HEAD
+    
+    <label for="title">Title:</label>
+    <input id="title" name="title" type="text" value="{{ form.cleaned_data.title }}" required />
+
     {% if form.title.errors %}
         {{form.title.errors }}
     {% endif %}
-
-    {{ form.description.label }}
-    {{ form.description }}<br/>
+    
+    <label for="description">Description:</label>
+    <textarea id="description" name="description">{{ form.cleaned_data.description }}</textarea>
     {% if form.description.errors %}
         {{form.description.errors }}
     {% endif %}
-
+    
     {{ form.hospital.label }}
     {{ form.hospital }}<br/>
     {% if form.hospital.errors %}
         {{form.hospital.errors }}
     {% endif %}
-
+    
     {{ form.pic.label }}
     {{ form.pic }}<br/>
 

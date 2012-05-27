@@ -7,6 +7,7 @@ from django.template import RequestContext
 from django.contrib.auth import authenticate, login, logout
 from voting.models import Vote
 
+from voting.models import Vote
 from bugs.models import Bug
 from forms import LoginForm
 from bugs.forms import BugForm
