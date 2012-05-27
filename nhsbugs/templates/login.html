@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<section class="popular">
+<section>
     <h1>Login</h1>
 
     {% if form.errors %}
@@ -10,19 +10,11 @@
     {% endif %}
     <form action="" method="POST">
         {% csrf_token %}
-        <table width="100%">
-            <tr>
-                <td><label for="username">Username/Email</label></td>
-                <td><input type="text" id="username" name="username" /></td>
-            </tr>
-            <tr>
-                <td><label for="password">Password</label></td>
-                <td><input type="password" id="password" name="password" /></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><input type="submit" value="Login" /></td>
-        </table>
+            <label for="username">Username/Email:</label>
+            <input type="text" id="username" name="username" />
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" />
+            <button type="submit">Login</button>
     </form>
 </section>
 
