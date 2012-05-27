@@ -1,4 +1,4 @@
-{% load voting_tags %}
+
 <article>
     {% if bug.pic %}
         <a href="{{ MEDIA_URL }}/{{ bug.pic }}" target="_blank"><img class="thumbnail" src="{{ MEDIA_URL }}/{{ bug.pic }}" /></a>
@@ -9,14 +9,13 @@
         <h2>{{ bug.hospital }}</h2>
     </hgroup>
 
-{% vote_by_user user on bug as vote %}
     <section class="meta">
         <span class="voting">
-{% if not vote %}
+{% if bug.user_voted %}
+            (voted)
+{% else %}
             <a href="{% url vote_bug slug=bug.slug score=1%}" class="up">&#9650;</a>
             <a href="{% url vote_bug slug=bug.slug score=-1%}" class="down">&#9660;</a>
-{% else %}
-            (voted)
 {% endif %}
         </span>
         <span>
