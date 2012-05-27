@@ -1,7 +1,7 @@
 
 <article>
     {% if bug.pic %}
-        <img class="thumbnail" src="{{ MEDIA_URL }}/{{ bug.pic }}" />
+        <a href="{{ MEDIA_URL }}/{{ bug.pic }}" target="_blank"><img class="thumbnail" src="{{ MEDIA_URL }}/{{ bug.pic }}" /></a>
     {% endif %}
 
     <hgroup>

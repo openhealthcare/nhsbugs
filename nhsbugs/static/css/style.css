@@ -384,13 +384,18 @@ form select {
 button {
     clear: both;
     float: right;
-    padding: 10px 5px;
+    padding: 10px;
     background-color: #990000;
     border-radius: 4px;
     height: auto;
     color: #ffffff;
     border: none;
     min-width: 100px;
+}
+
+button:hover {
+    color: #eeeeee;
+    background-color: #cc0000;
 }
 
 @media (max-width: 35em) {

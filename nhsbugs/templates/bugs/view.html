@@ -22,8 +22,8 @@
 
 <h1>Leave a comment</h1>
 {% get_comment_form for bug as form %}
-<table>
-  <form action="{% comment_form_target %}" method="post">
+
+<form action="{% comment_form_target %}" method="post">
     {% csrf_token %}
     <input id="id_name" type="hidden" value="{{request.user.username}}" name="name" maxlength="50">
     <input type="hidden" name="email" id="id_email" value="{{request.user.email}}">
@@ -35,15 +35,9 @@
     {{ form.object_pk }}
     {{ form.timestamp }}
     {{ form.security_hash }}
-</td>
-    <tr>
-      <td colspan="2">
-        <input type="submit" name="submit" value="Post">
-        <input type="hidden" name="next" value="{% url view_bug slug=bug.slug%}" />
-      </td>
-    </tr>
-  </form>
-</table>
+    <button type="submit" name="submit" value="Post">Submit Comment</button>   
+    <input type="hidden" name="next" value="{% url view_bug slug=bug.slug%}" />
+</form>
 
 
 </section>
