@@ -1,7 +1,7 @@
 {% load active_tag %}
 
 {% url home as home_x %}
-{% url list_hospitals as hospital_x %}
+{% url hospital:list as hospital_x %}
 {% url login as login_x %}
 {% url my_bugs as my_bugs_x %}
 
@@ -38,12 +38,12 @@
         <nav>
             <ul>
                 <li class="home {% active request home_x %}"><a href="{% url home %}">Home</a></li>
-                <li class="list_hospitals {% active request hospital_x %}"><a href="{% url list_hospitals %}">Hospitals</a></li>
+                <li class="list_hospitals {% active request hospital_x %}"><a href="{% url hospital_list %}">Hospitals</a></li>
                 <li class="my_bugs {% active request my_bugs_x %}"><a href="{% url my_bugs %}">My Bugs</a></li>
                 {% if user.is_authenticated %}
-                <li><span class="userInfo {% active request login_x %}">Logged in as: {{ user.username }}</span>(<a href="/logout/">Logout</a>)</li>
+                <li><span class="userInfo {% active request login_x %}">Logged in as: {{ user.username }}</span>(<a href="{% url logout %}">Logout</a>)</li>
                 {% else %}
-                <li class="{% active request login_x %}"><a href="/login/">Login/Register</a></li>
+                <li class="{% active request login_x %}"><a href="{% url login %}">Login/Register</a></li>
                 {% endif %}
             </ul>
         </nav>

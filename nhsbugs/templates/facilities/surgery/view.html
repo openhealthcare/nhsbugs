@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<article>
+    <section class="details">
+        <h1>{{ surgery.name|safe }}</h1>
+        <p class="address">
+            {{ surgery.address1|safe }}
+            {% if surgery.address2 %}
+                , {{ surgery.address2|safe }}
+            {% endif %}
+            {% if surgery.address3 %}
+                , {{ surgery.address3|safe }}
+            {% endif %}
+            {% if surgery.address4 %}
+                , {{ surgery.address4|safe }}
+            {% endif %}
+            {% if surgery.address5 %}
+                , {{ surgery.address5|safe }}
+            {% endif %}
+            {% if surgery.postcode %}
+                , {{ surgery.postcode|safe }}
+            {% endif %}
+            {% if surgery.lat and surgery.lng %}
+            (<a href="https://maps.google.com/?ie=UTF8&hq=&ll={{ surgery.lat }},{{ surgery.lng }}&z=17" target="_blank">See map</a>)
+            {% endif %}
+        </p>
+
+        <p>
+            <a href="{% url report_bug_surgery surgery_slug=surgery.slug %}">Report a bug!</a>
+        </p>
+    </section>
+
+    <section class="bugsList">
+    {% for bug in bugs %}
+        {% include 'bugs/detail.html' %}
+    {% endfor %}
+    </section>
+</article>
+{% endblock %}

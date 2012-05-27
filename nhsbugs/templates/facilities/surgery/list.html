@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+
+{% for surgery in surgeries %}
+    <a href="{% url surgery_list slug=surgery.slug%}">{{ surgery.name }}</a><br/>
+{% endfor %}
+{% endblock %}
