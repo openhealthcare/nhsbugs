@@ -26,6 +26,12 @@
         <ul>
             <li class="home"><a href="{% url home %}">Home</a></li>
             <li class="list_hospitals"><a href="{% url list_hospitals %}">Hospitals</a></li>
+            <li class="my_bugs"><a href="#">My Bugs</a></li>
+            {% if user.is_authenticated %}
+            <li>Logged in as: {{ user.username }} <a href="/logout/">Logout</a></li>
+            {% else %}
+            <li><a href="/login/">Login/Register</a></li>
+            {% endif %}
         </ul>
     </nav>
   </header>

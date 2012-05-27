@@ -24,3 +24,5 @@ class Bug(models.Model):
     def get_vote_counts(self):
         return Vote.objects.get_for_object(self).count()
 
+    def is_fixed(self):
+        return self.status == 'F'
