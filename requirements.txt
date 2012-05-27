@@ -11,4 +11,4 @@ python-dateutil==1.5
 python-openid==2.2.5
 wsgiref==0.1.2
 django-autoslug==1.5.0
--e git+https://github.com/bkeating/django-voting.git#egg=django-voting
+-e git+https://github.com/spreeker/django-voting2.git#egg=django-voting

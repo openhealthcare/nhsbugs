@@ -1,10 +1,15 @@
 from tastypie.resources import ModelResource
+from tastypie import fields
+from tastypie.utils import trailing_slash
 from facilities.models import Hospital
 from django.core import serializers
 from django.http import HttpResponse
 from django.db.models import Q
+from django.conf.urls.defaults import url
+
 
 class HospitalResource(ModelResource):
+
     class Meta:
         queryset = Hospital.objects.all()
         list_allowed_methods = ['get']

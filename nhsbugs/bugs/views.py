@@ -17,9 +17,9 @@ from facilities.models import Hospital
 def view_bug(request, slug):
     bug = get_object_or_404( Bug, slug=slug)
     votes = Vote.objects.get_for_object(bug)
-    votes_up = votes.get(1, 0)
-    votes_down = votes.get(-1, 0)
-    votes_total = votes.get(1, 0) + (votes.get(-1, 0) * -1)
+    votes_up = sum( [ 1 for x in votes if x.direction == 1])
+    votes_down = sum( [ 1 for x in votes if x.direction == -1])
+    votes_total = len(votes)
     user_vote = 0
     if request.user.is_authenticated():
         user_vote_list = Vote.objects.get_user_votes(request.user, obj=bug)

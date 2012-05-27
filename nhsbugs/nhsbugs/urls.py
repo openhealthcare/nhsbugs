@@ -5,11 +5,13 @@ from django.conf.urls.defaults import *
 from tastypie.api import Api
 from django.views.generic.simple import direct_to_template
 from facilities.api import HospitalResource
+from bugs.api import BugResource
 
 admin.autodiscover()
 
 v1_api = Api(api_name='v1')
 v1_api.register(HospitalResource())
+v1_api.register(BugResource())
 
 
 urlpatterns = patterns('',
