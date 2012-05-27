@@ -3,10 +3,10 @@
 
 
 /* TEAM */
-  <your title>: <your name>
-  Site:
-  Twitter:
-  Location:
+  Frontend Developer: Karl Williams
+  Site: deadlight.net
+  Twitter: @karlwilliams
+  Location: London
 
 /* THANKS */
   Names (& URL):
