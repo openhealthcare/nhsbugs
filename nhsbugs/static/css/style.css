@@ -214,11 +214,11 @@ time, .meta span {
     box-shadow: 0 -20px 20px 20px #888;
 }
 header h1 {
-    float: left;
     font-weight: 300;
     height: 77px;
     line-height: 77px;
     padding: 0;
+    margin: 0;
 }
 header img {
     float: left;
