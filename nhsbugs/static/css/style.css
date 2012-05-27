@@ -454,3 +454,12 @@ button:hover {
 .comment textarea {
     width: 100%;
 }
+
+.hospitals {
+    margin: 0;
+    padding: 0;
+}
+.hospitals li{
+    list-style-type: none;
+    padding: 5px;
+}

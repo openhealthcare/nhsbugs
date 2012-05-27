@@ -4,11 +4,23 @@
 
 {% block content %}
 <h1>List of hospitals</h1>
+
+<section class="first">
     <ul class="hospitals">
-{% for hospital in hospitals %}
+{% for hospital in hospitals_a %}
         <li>
             <a href="/hospital/{{ hospital.slug }}" title="View {{ hospital.name }}">{{ hospital.name }}</a>
         </li>
 {% endfor %}
     </ul>
+</section>
+<section class="second">
+    <ul class="hospitals">
+{% for hospital in hospitals_b %}
+        <li>
+            <a href="/hospital/{{ hospital.slug }}" title="View {{ hospital.name }}">{{ hospital.name }}</a>
+        </li>
+{% endfor %}
+    </ul>
+</section>
 {% endblock %}
