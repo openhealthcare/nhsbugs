@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="bugsList">
+    <h1>My Bugs</h1>
+
+{% for bug in bugs %}
+    {% include 'bugs/detail.html' with description=bug.description|truncatechars:50 moreInfo=True %}
+{% endfor %}
+</section>
+
+{% endblock %}

@@ -451,3 +451,6 @@ button:hover {
     float: right;
     margin-top: 15px;
 }
+.comment textarea {
+    width: 100%;
+}

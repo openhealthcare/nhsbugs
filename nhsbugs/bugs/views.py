@@ -78,3 +78,12 @@ def report_bug(request,hospital_slug=None):
                                 "hospitals": hospitals
                                },
                                context_instance=RequestContext(request))
+
+@login_required
+def view_my_bugs(request):
+    bugs = Bug.objects.filter(reporter=request.user).order_by('-update_date').all()
+    return render_to_response('bugs/my_bugs.html',
+                               {
+                                  "bugs": bugs
+                               },
+                               context_instance=RequestContext(request))
