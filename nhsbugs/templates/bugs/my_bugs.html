@@ -9,5 +9,8 @@
     {% include 'bugs/detail.html' with description=bug.description|truncatechars:50 moreInfo=True %}
 {% endfor %}
 </section>
-
+<section class="bugsList">
+    <br/>
+    <a href="http://checklisthq.com/checklist/1"><img border="0" height="30" src="{{ MEDIA_URL }}/img/cl_logo.png">Fault correction checklist</a>
+</section>
 {% endblock %}

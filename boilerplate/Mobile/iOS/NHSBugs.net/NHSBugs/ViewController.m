@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "GetLocation.h"
 #import "JSONKit.h"
+#import "Search.h"
+#import "HospitalView.h"
 
 @implementation ViewController
 @synthesize nearbyLocations;
@@ -97,11 +99,21 @@
     
     if(located){
         cell.textLabel.text = [[nearbyLocations objectAtIndex:storyIndex] valueForKey:@"name"];
-      //  cell.detailTextLabel = [[nearbyLocations objectAtIndex:storyIndex] valueForKey:@"distance"];
     }else{
     cell.textLabel.text = [namesArray objectAtIndex:storyIndex];
     }
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    hospitalDetail = [[HospitalView alloc] initWithNibName:@"HospitalView" bundle:nil];
+    hospitalDetail.title = [[nearbyLocations objectAtIndex:indexPath.row] valueForKey:@"name"];
+    hospitalDetail.latitude = [[nearbyLocations objectAtIndex:indexPath.row] valueForKey:@"latitude"];
+    hospitalDetail.longitude = [[nearbyLocations objectAtIndex:indexPath.row] valueForKey:@"longitude"];
+    [self.navigationController pushViewController:hospitalDetail animated:YES];
+    [hospitalDetail release];
+    hospitalDetail = nil;
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Menu" style:UIBarButtonItemStylePlain target:nil action:nil];
 }
 
 -(void)autoLocated:(id)sender{
@@ -120,10 +132,17 @@
     [grabLocation.view removeFromSuperview];
     [grabLocation release];
     grabLocation = nil;
+    Search *manualEntry = [[[Search alloc] init] autorelease];
+    [self presentModalViewController:manualEntry animated:YES];
 }
 
+-(void)manualSearch:(id)sender{
+    Search *manualEntry = [[[Search alloc] init] autorelease];
+    [self presentModalViewController:manualEntry animated:YES];
+}
 - (void)viewWillAppear:(BOOL)animated
 {
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
     [super viewWillAppear:animated];
 }
 
@@ -134,6 +153,7 @@
 
 - (void)viewWillDisappear:(BOOL)animated
 {
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
 	[super viewWillDisappear:animated];
 }
 

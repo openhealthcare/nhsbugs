@@ -297,6 +297,7 @@ nav {
     padding-right: 20px;
 }
 .main>section:first-of-type+section {
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
     padding-left: 20px;
     border-left: 2px solid #ccc;
@@ -308,6 +309,7 @@ nav {
 footer {
     font-size: 0.9em;
     color: #666666;
+    overflow: hidden;
 }
 footer nav {
     float: left;
@@ -449,7 +451,7 @@ button:hover {
 .legal {
     font-size: 0.8em;
     float: right;
-    margin-top: 15px;
+    margin-top: 12px;
 }
 .comment textarea {
     width: 100%;
