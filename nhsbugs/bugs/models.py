@@ -26,3 +26,4 @@ class Bug(models.Model):
 
     def is_fixed(self):
         return self.status == 'F'
+

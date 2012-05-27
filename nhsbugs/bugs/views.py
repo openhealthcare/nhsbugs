@@ -41,7 +41,7 @@ def vote_bug(request, slug, score):
     Vote.objects.record_vote(request.user, bug, int(score))
     bug.save() # we want activity
 
-    messages.add_message(request, messages.INFO, 'Thanks for voting up for %s' % bug.title )
+    #messages.add_message(request, messages.INFO, 'Thanks for voting up for %s' % bug.title )
 
     return HttpResponseRedirect("/bugs/view/%s" % bug.slug)
 
