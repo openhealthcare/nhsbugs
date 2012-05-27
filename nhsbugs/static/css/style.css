@@ -348,6 +348,16 @@ footer nav {
 }
 
 /* Forms */
+form {
+    padding: 0 0 20px 0;
+}
+form:after {
+    content: '';
+    display: block;
+    height: 0;
+    width: 0;
+    clear: both;
+}
 form label {
     float: left;
     text-align: right;
@@ -422,4 +432,9 @@ button:hover {
 }
 .voting a {
     text-decoration: none;
+}
+.legal {
+    font-size: 0.8em;
+    float: right;
+    margin-top: 15px;
 }
