@@ -201,7 +201,8 @@ body {
     margin: 0;
     padding: 0;
 }
-time {
+time, .info {
+    display: block;
     font-size: 0.8em;
     color: #888;
 }
@@ -264,7 +265,7 @@ header nav {
     clear: both;
     display: block;
 }
-.main>section {
+` {
     float: left;
     width: 50%;
     padding: 0;
@@ -287,6 +288,11 @@ footer {
     color: #666666;
 }
 
+.meta {
+    float: right;
+    text-align: right;
+}
+
 .bugsList article {
     padding: 10px 0;
     overflow: hidden;
@@ -301,25 +307,20 @@ footer {
     margin-right: 20px;
 }
 .bugsList article hgroup {
-    clear: right;
+    float: left;
     overflow: hidden;
+    margin-bottom: 10px;
+}
+.bugsList article h1, .bugsList article hgroup h2 {
+    margin: 0;
 }
 .bugsList article hgroup h2 {
-    float: left;
     font-size: 1em;
     font-weight: normal;
-    margin: 0 0 0 10px;
     color: #888;
 }
-.bugsList article h1 {
-    margin: 0;
-    float: left;
-}
-.bugsList article time {
-    float: right;
-    float: right;
-}
 .bugsList .detail {
+    clear: left;
     margin-bottom: 10px;
 }
 .bugsList .more {
@@ -369,3 +370,20 @@ input[type="cancel"] {
     border: none;
 }
 
+@media (max-width: 35em) {
+    .main>section {
+        float: none;
+        width: auto;
+        border: none;
+    }
+    .main>section:first-of-type {
+        padding-right: 0;
+        padding-bottom: 20px;
+    }
+    .main>section:first-of-type+section {
+        padding-left: 0;
+        padding-top: 20px;
+        border-left: none;
+        border-top: 2px solid #ccc;
+    }
+}
