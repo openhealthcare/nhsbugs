@@ -2,15 +2,21 @@
     {% csrf_token %}
     {{ form.title.label }}
     {{ form.title }}<br/>
+    {% if form.title.errors %}
+        {{form.title.errors }}
+    {% endif %}
 
     {{ form.description.label }}
     {{ form.description }}<br/>
+    {% if form.description.errors %}
+        {{form.description.errors }}
+    {% endif %}
 
-    {{ form.description.hospital }}
-
-{% ifequal hospitalKnown True %}
-   {{ form.hospital }}<br/>
-{% endifequal %}
+    {{ form.hospital.label }}
+    {{ form.hospital }}<br/>
+    {% if form.hospital.errors %}
+        {{form.hospital.errors }}
+    {% endif %}
 
     {{ form.pic.label }}
     {{ form.pic }}<br/>

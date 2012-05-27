@@ -2,13 +2,13 @@
     {% if bug.pic %}
         <img class="thumbnail" src="{{ MEDIA_URL }}/{{ bug.pic }}" />
     {% endif %}
-    
+
     <hgroup>
         <h1>{{ bug.title }}</h1>
         <h2>{{ bug.votes }} votes</h2>
         <time pubdate>{{ bug.reported_date }}</time>
     </hgroup>
     <p class="summary">{{ bug.description|truncatechars:50 }}</p>
-    
+
     <a href="{% url view_bug slug=bug.slug %}" class="more">More information</a>
 </article>

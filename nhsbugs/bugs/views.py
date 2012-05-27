@@ -5,6 +5,7 @@ from django.http import HttpResponseRedirect, HttpResponse, Http404, HttpRespons
 from django.shortcuts import render_to_response, redirect, get_object_or_404, render
 from django.template import RequestContext
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 
 from voting.models import Vote
 
@@ -38,6 +39,10 @@ def view_bug(request, slug):
 def vote_bug(request, slug, score):
     bug = get_object_or_404( Bug, slug=slug)
     Vote.objects.record_vote(request.user, bug, int(score))
+    bug.save() # we want activity
+
+    messages.add_message(request, messages.INFO, 'Thanks for voting up for %s' % bug.title )
+
     return HttpResponseRedirect("/bugs/view/%s" % bug.slug)
 
 @login_required
@@ -58,7 +63,12 @@ def report_bug(request,hospital_slug=None):
             b.hospital = form.cleaned_data['hospital']
             b.reporter = request.user
             b.save()
+            messages.add_message(request, messages.INFO, '''Thanks for the reporting a fault!''' )
+
             return HttpResponseRedirect("/bugs/view/" + b.slug)
+        else:
+            messages.add_message(request, messages.ERROR, 'There was an error with the form, '\
+                                                          'please correct it' )
     return render_to_response('bugs/report.html',
                                {
                                 "form": form,

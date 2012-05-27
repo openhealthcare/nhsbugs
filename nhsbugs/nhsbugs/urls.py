@@ -17,7 +17,7 @@ urlpatterns = patterns('',
     url(r'^login/$', 'nhsbugs.views.login_view', name='login'),
     url(r'^logout/$', 'nhsbugs.views.logout_view', name='login'),
     url(r'^about/$', direct_to_template, {'template': 'about.html'}),
-
+    url(r'^comments/', include('django.contrib.comments.urls')),
     url(r'^bugs/', include('bugs.urls')),
     url(r'^hospital/', include('facilities.urls_hospitals')),
     url(r'^sha/', include('facilities.urls_sha')),
