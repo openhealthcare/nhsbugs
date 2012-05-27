@@ -333,32 +333,35 @@ form label {
     text-align: right;
     margin: 5px 10px 5px 5px;
     padding: 5px 0;
+    width: 100px;
 }
 form input {
     height: 20px;
-    width: 148px;
+    width: 200px;
     padding: 5px;
     margin: 5px 10px 5px 5px;
 }
 form input,
-form textarea {
+form textarea,
+form select {
     float: left;
     border-radius: 4px;
 }
 form textarea{
     margin: 5px;
     padding: 5px;
+    width: 200px;
+    /* float: none;
+    width: 100%; */
 }
 form select {
     text-indent: 7px;
     padding: 0;
-    width: 157px;
+    width: 212px;
     height: 30px;
-    margin: 5px;
+    margin: 5px 10px 7px 5px;
 }
-input[type="submit"],
-input[type="button"],
-input[type="cancel"] {
+button {
     clear: both;
     float: right;
     padding: 10px 5px;
