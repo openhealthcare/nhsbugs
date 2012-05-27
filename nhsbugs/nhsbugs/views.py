@@ -6,6 +6,7 @@ from django.shortcuts import render_to_response, redirect, get_object_or_404, re
 from django.template import RequestContext
 from django.contrib.auth import authenticate, login, logout
 
+from voting.models import Vote
 from bugs.models import Bug
 from forms import LoginForm
 from bugs.forms import BugForm

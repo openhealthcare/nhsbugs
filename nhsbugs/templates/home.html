@@ -6,7 +6,7 @@
     <h1>Popular Bugs</h1>
 
 {% for bug in top_bugs %}
-    {% include 'bugs/detail.html' %}
+    {% include 'bugs/detail.html' with description=bug.description|truncatechars:50 %}
 {% endfor %}
 </section>
 

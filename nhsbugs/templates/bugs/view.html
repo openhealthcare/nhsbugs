@@ -10,21 +10,8 @@ User_Voted: {{ user_vote }}
 <a href="{% url vote_bug slug=bug.slug score=1%}">Vote UP</a><br/>
 <a href="{% url vote_bug slug=bug.slug score=-1%}">Vote Down</a><br/>
 
-
-<article>
-    <h1>{{ bug.title }}</h1>
-
-    {% if bug.pic %}
-    <img src="{{ MEDIA_URL }}/{{bug.pic}}" width="100" height="100"/>
-    {% else %}
-    <p>--No picture--</p>
-    {% endif %}
-
-</article>
-
-
-    <section class="bugsList">
-        {% include 'bugs/detail.html' %}
-    </section>
+<section class="bugsList">
+    {% include 'bugs/detail.html' %}
+</section>
 
 {% endblock %}
