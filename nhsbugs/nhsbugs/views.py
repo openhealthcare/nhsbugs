@@ -20,7 +20,8 @@ def home(request):
     return render_to_response('home.html',
                                {
                                'top_bugs': recent_bugs,
-                               'form': form
+                               'form': form,
+                               'hospitals': hospitals
                                },
                                context_instance=RequestContext(request))
 
