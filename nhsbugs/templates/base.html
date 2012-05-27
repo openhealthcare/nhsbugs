@@ -1,3 +1,11 @@
+{% load active_tag %}
+
+{% url home as home %}
+{% url list_hospitals as hospital %}
+{% url login as login %}
+{% url my_bugs as my_bugs %}
+
+
 <!doctype html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
@@ -19,7 +27,7 @@
 
 <body>
   <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
-  
+
   <section class="top">
       <header>
         {% block header %}
@@ -27,19 +35,19 @@
         {% endblock %}
         <nav>
             <ul>
-                <li class="home"><a href="{% url home %}">Home</a></li>
-                <li class="list_hospitals"><a href="{% url list_hospitals %}">Hospitals</a></li>
-                <li class="my_bugs"><a href="#">My Bugs</a></li>
+                <li class="home {% active request home %}"><a href="{% url home %}">Home</a></li>
+                <li class="list_hospitals {% active request hospital %}"><a href="{% url list_hospitals %}">Hospitals</a></li>
+                <li class="my_bugs {% active request my_bugs %}"><a href="#">My Bugs</a></li>
                 {% if user.is_authenticated %}
-                <li><span class="userInfo">Logged in as: {{ user.username }}</span>(<a href="/logout/">Logout</a>)</li>
+                <li><span class="userInfo {% active request login %}">Logged in as: {{ user.username }}</span>(<a href="/logout/">Logout</a>)</li>
                 {% else %}
-                <li><a href="/login/">Login/Register</a></li>
+                <li class="{% active request login %}"><a href="/login/">Login/Register</a></li>
                 {% endif %}
             </ul>
         </nav>
       </header>
   </section>
-  
+
   <section class="main" role="main">
     {% if messages %}
     <ul class="messages">
@@ -56,7 +64,7 @@
     {% block aside %}
     {% endblock %}
   </aside>
-  
+
   <section class="bottom">
       <footer>
         {% block extra_footer %}
@@ -66,7 +74,7 @@
                 <li><a href="/about/">About</a></li>
             </ul>
         </nav>
-        <p>All content &copy; nhsbugs.net unless otherwise stated</p>
+        <p class="legal">All content &copy; nhsbugs.net unless otherwise stated</p>
       </footer>
   </section>
 
