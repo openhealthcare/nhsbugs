@@ -23,13 +23,13 @@
             {% if hospital.postcode %}
                 , {{ hospital.postcode|safe }}
             {% endif %}
-            {% if hospital.lat and hospital.lng %}    
+            {% if hospital.lat and hospital.lng %}
             (<a href="https://maps.google.com/?ie=UTF8&hq=&ll={{ hospital.lat }},{{ hospital.lng }}&z=17" target="_blank">See map</a>)
             {% endif %}
         </p>
 
         <p>
-            <a href="{% url report_bug hospital_slug=hospital.slug %}">Report a bug!</a>
+            <a href="{% url report_bug_hospital hospital_slug=hospital.slug %}">Report a bug!</a>
         </p>
     </section>
 
