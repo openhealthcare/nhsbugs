@@ -195,6 +195,9 @@ td { vertical-align: top; }
 }
 
 /* NHS Bugs Design & Layout */
+article h2 {
+    font-size: 1.1em;
+}
 html {
     background-color: #eee;
 }
@@ -273,6 +276,9 @@ nav {
     color: #666666;
     margin-right: 3px;
 }
+.main {
+    padding: 20px 0;
+}
 .main:after {
     content: '';
     width: 0;
@@ -347,10 +353,17 @@ footer nav {
     font-size: 0.8em;
 }
 
-/* Forms */
-form {
-    padding: 0 0 20px 0;
+/* Tablez */
+table {
+    border: none;
 }
+td , th {
+    padding: 10px;
+    background-color: #eee;
+    border: 5px solid #fff;
+}
+
+/* Forms */
 form:after {
     content: '';
     display: block;
