@@ -1,6 +1,15 @@
 from django.db import models
 from autoslug import AutoSlugField
 
+class ResponsibleContact(models.Model):
+    name = models.CharField(max_length=64, null=False, blank=False)
+    jobtitle = models.CharField(max_length=100, null=True, blank=True)
+    email = models.EmailField(max_length=100, null=False, blank=False)
+
+    def __unicode__(self):
+        return self.name
+
+
 class SHA(models.Model):
     slug = AutoSlugField(populate_from='name', unique=True)
     code = models.CharField(max_length=10, null=False, blank=False)
@@ -25,6 +34,7 @@ class SHA(models.Model):
     def __unicode__(self):
         return self.name
 
+
 class Hospital(models.Model):
     slug = AutoSlugField(populate_from='name', unique=True)
 
@@ -38,6 +48,8 @@ class Hospital(models.Model):
     address4 = models.CharField(max_length=64, null=True, blank=True)
     address5 = models.CharField(max_length=64, null=True, blank=True)
     postcode = models.CharField(max_length=16, null=True, blank=True)
+
+    responsible = models.ForeignKey(ResponsibleContact, related_name='hospital', null=True)
 
     lat = models.CharField(max_length=16, null=True, blank=True)
     lng = models.CharField(max_length=16, null=True, blank=True)

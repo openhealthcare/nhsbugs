@@ -111,6 +111,7 @@ TEMPLATE_DIRS = (
 TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.media",
     "django.contrib.auth.context_processors.auth",
+    'django.contrib.messages.context_processors.messages'
 )
 
 INSTALLED_APPS = (
@@ -123,6 +124,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.admindocs',
     'django.contrib.comments',
+    "django.contrib.messages",
     'facilities',
     'bugs',
     'nhsbugs',
