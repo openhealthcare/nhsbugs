@@ -74,13 +74,13 @@
         CLLocation *loc = [[CLLocation alloc] initWithLatitude:[[[locations objectAtIndex:i] valueForKey:@"latitude"] doubleValue]  longitude:[[[locations objectAtIndex:i] valueForKey:@"longitude"] doubleValue]];
         
         CLLocationDistance distance = [newLocation distanceFromLocation:loc];
-        
         if(distance < 1000){
-            NSMutableDictionary *results = [NSMutableDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"%@",[[locations objectAtIndex:i] valueForKey:@"name"]], @"name", [NSString stringWithFormat:@"%f",distance], @"distance", nil];
+            NSMutableDictionary *results = [NSMutableDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"%@",[[locations objectAtIndex:i] valueForKey:@"name"]], @"name", [NSString stringWithFormat:@"%f",distance], @"distance", [NSString stringWithFormat:@"%f",[[locations objectAtIndex:i] valueForKey:@"latitude"]], @"latitude", [NSString stringWithFormat:@"%f",[[locations objectAtIndex:i] valueForKey:@"longitude"]], @"longitude", nil];
             [nearby addObject:results];
         }
     }
-    
+    NSMutableDictionary *staged = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"Albany Clinic",@"name",@"999", @"distance", @"50.530741", @"latitude", @"-3.605825", @"longitude", nil];
+    [nearby addObject:staged];
 
     
     UIImage *image = [UIImage imageNamed: @"location_found.png"];
