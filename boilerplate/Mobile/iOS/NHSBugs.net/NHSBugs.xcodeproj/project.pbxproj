@@ -11,11 +11,16 @@
 		7E0283EA1571422600631F66 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0283E91571422600631F66 /* JSONKit.m */; };
 		7E34D56A15713974002EE2BF /* location_found.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E34D56915713974002EE2BF /* location_found.png */; };
 		7E34D56C15713D30002EE2BF /* location_notfound.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E34D56B15713D30002EE2BF /* location_notfound.png */; };
+		7E4609741571AC7700D59A69 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E4609731571AC7700D59A69 /* bg.png */; };
 		7E46F01515711842003DBF39 /* GetLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E46F01315711842003DBF39 /* GetLocation.m */; };
 		7E46F01615711842003DBF39 /* GetLocation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E46F01415711842003DBF39 /* GetLocation.xib */; };
 		7E46F01915712001003DBF39 /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E46F01815712001003DBF39 /* location.png */; };
 		7E46F01B15712398003DBF39 /* manual_entry.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E46F01A15712398003DBF39 /* manual_entry.png */; };
 		7E46F02215712BEC003DBF39 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E46F02115712BEC003DBF39 /* CoreLocation.framework */; };
+		7E6EFDE81571A47200E1AE78 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E6EFDE71571A47200E1AE78 /* icon.png */; };
+		7E6EFDEA1571A47700E1AE78 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E6EFDE91571A47700E1AE78 /* icon@2x.png */; };
+		7E6EFDEC1571A64200E1AE78 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E6EFDEB1571A64200E1AE78 /* Default.png */; };
+		7E6EFDEE1571A64700E1AE78 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E6EFDED1571A64700E1AE78 /* Default@2x.png */; };
 		7EF39FBF157111C20042CB84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EF39FBE157111C20042CB84 /* UIKit.framework */; };
 		7EF39FC1157111C20042CB84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EF39FC0157111C20042CB84 /* Foundation.framework */; };
 		7EF39FC3157111C20042CB84 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EF39FC2157111C20042CB84 /* CoreGraphics.framework */; };
@@ -32,12 +37,17 @@
 		7E0283E91571422600631F66 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		7E34D56915713974002EE2BF /* location_found.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location_found.png; sourceTree = SOURCE_ROOT; };
 		7E34D56B15713D30002EE2BF /* location_notfound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location_notfound.png; sourceTree = SOURCE_ROOT; };
+		7E4609731571AC7700D59A69 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg.png; path = ../../bg.png; sourceTree = "<group>"; };
 		7E46F01215711842003DBF39 /* GetLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetLocation.h; sourceTree = "<group>"; };
 		7E46F01315711842003DBF39 /* GetLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetLocation.m; sourceTree = "<group>"; };
 		7E46F01415711842003DBF39 /* GetLocation.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GetLocation.xib; sourceTree = "<group>"; };
 		7E46F01815712001003DBF39 /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location.png; sourceTree = "<group>"; };
 		7E46F01A15712398003DBF39 /* manual_entry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = manual_entry.png; sourceTree = "<group>"; };
 		7E46F02115712BEC003DBF39 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		7E6EFDE71571A47200E1AE78 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		7E6EFDE91571A47700E1AE78 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		7E6EFDEB1571A64200E1AE78 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		7E6EFDED1571A64700E1AE78 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		7EF39FBA157111C20042CB84 /* NHSBugs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NHSBugs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EF39FBE157111C20042CB84 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7EF39FC0157111C20042CB84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -71,6 +81,10 @@
 		7EF39FAF157111C10042CB84 = {
 			isa = PBXGroup;
 			children = (
+				7E6EFDED1571A64700E1AE78 /* Default@2x.png */,
+				7E6EFDEB1571A64200E1AE78 /* Default.png */,
+				7E6EFDE91571A47700E1AE78 /* icon@2x.png */,
+				7E6EFDE71571A47200E1AE78 /* icon.png */,
 				7EF39FC4157111C20042CB84 /* NHSBugs */,
 				7EF39FBD157111C20042CB84 /* Frameworks */,
 				7EF39FBB157111C20042CB84 /* Products */,
@@ -115,6 +129,7 @@
 		7EF39FC5157111C20042CB84 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7E4609731571AC7700D59A69 /* bg.png */,
 				7E0283E81571422600631F66 /* JSONKit.h */,
 				7E0283E91571422600631F66 /* JSONKit.m */,
 				7E0283E5157141B100631F66 /* hospitals.json */,
@@ -188,6 +203,11 @@
 				7E34D56A15713974002EE2BF /* location_found.png in Resources */,
 				7E34D56C15713D30002EE2BF /* location_notfound.png in Resources */,
 				7E0283E6157141B100631F66 /* hospitals.json in Resources */,
+				7E6EFDE81571A47200E1AE78 /* icon.png in Resources */,
+				7E6EFDEA1571A47700E1AE78 /* icon@2x.png in Resources */,
+				7E6EFDEC1571A64200E1AE78 /* Default.png in Resources */,
+				7E6EFDEE1571A64700E1AE78 /* Default@2x.png in Resources */,
+				7E4609741571AC7700D59A69 /* bg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,7 +267,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -264,7 +284,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -278,7 +298,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NHSBugs/NHSBugs-Prefix.pch";
 				INFOPLIST_FILE = "NHSBugs/NHSBugs-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -293,7 +313,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NHSBugs/NHSBugs-Prefix.pch";
 				INFOPLIST_FILE = "NHSBugs/NHSBugs-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;

@@ -14,8 +14,10 @@
     ViewController *menu;
     IBOutlet UIButton *manual;
     IBOutlet UIImageView *logo;
+    NSMutableArray *locations;
 }
 @property(nonatomic, retain) ViewController *menu;
+@property(nonatomic, retain) NSMutableArray *locations;
 
 -(IBAction)manual:(id)sender;
 @end

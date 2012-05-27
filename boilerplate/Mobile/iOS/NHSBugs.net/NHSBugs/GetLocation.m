@@ -10,7 +10,7 @@
 #import "ViewController.h"
 
 @implementation GetLocation
-@synthesize menu;
+@synthesize menu, locations;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -67,25 +67,26 @@
     didUpdateToLocation:(CLLocation *)newLocation
            fromLocation:(CLLocation *)oldLocation
 {
-    int degrees = newLocation.coordinate.latitude;
-    double decimal = fabs(newLocation.coordinate.latitude - degrees);
-    int minutes = decimal * 60;
-    double seconds = decimal * 3600 - minutes * 60;
-    NSString *lat = [NSString stringWithFormat:@"%d° %d' %1.4f\"", 
-                     degrees, minutes, seconds];
-    menu.autoLatitude = lat;
-   // NSLog(@"Latitiude: %@",lat);
-    degrees = newLocation.coordinate.longitude;
-    decimal = fabs(newLocation.coordinate.longitude - degrees);
-    minutes = decimal * 60;
-    seconds = decimal * 3600 - minutes * 60;
-    NSString *longt = [NSString stringWithFormat:@"%d° %d' %1.4f\"", 
-                       degrees, minutes, seconds];
-    menu.autoLongitude= longt;
-    //NSLog(@"Longitude: %@",longt);
     [locationManager stopUpdatingLocation];
+    NSMutableArray *nearby = [[NSMutableArray alloc] init];
+    
+    for(int i = 0; i < [locations count]; i++){
+        CLLocation *loc = [[CLLocation alloc] initWithLatitude:[[[locations objectAtIndex:i] valueForKey:@"latitude"] doubleValue]  longitude:[[[locations objectAtIndex:i] valueForKey:@"longitude"] doubleValue]];
+        
+        CLLocationDistance distance = [newLocation distanceFromLocation:loc];
+        
+        if(distance < 1000){
+            NSMutableDictionary *results = [NSMutableDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"%@",[[locations objectAtIndex:i] valueForKey:@"name"]], @"name", [NSString stringWithFormat:@"%f",distance], @"distance", nil];
+            [nearby addObject:results];
+        }
+    }
+    
+
+    
     UIImage *image = [UIImage imageNamed: @"location_found.png"];
     [logo setImage:image];
+    
+    menu.nearbyLocations = nearby;
     
     [NSTimer scheduledTimerWithTimeInterval:1.0
                                      target:menu
