@@ -8,12 +8,14 @@
 
 #import <UIKit/UIKit.h>
 @class GetLocation;
+@class HospitalView;
 
 @interface ViewController : UIViewController<UISearchBarDelegate>{
     IBOutlet UITableView *searchtable;
     NSDictionary *hospitalJSON;
     NSMutableArray *namesArray, *coordsArray, *nearbyLocations;
     GetLocation *grabLocation;
+    HospitalView *hospitalDetail;
     BOOL located;
     IBOutlet UILabel *nearby, *notwhatlooking;
     IBOutlet UIButton *manual;
@@ -21,4 +23,5 @@
 @property(nonatomic, retain) NSMutableArray *nearbyLocations;
 -(void)autoLocated:(id)sender;
 -(void)manualEntry:(id)sender;
+-(IBAction)manualSearch:(id)sender;
 @end

@@ -43,6 +43,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrameSize">{320, 460}</string>
 						<reference key="NSSuperview" ref="774585933"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="168900898"/>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -56,6 +57,7 @@
 						<int key="NSvFlags">274</int>
 						<string key="NSFrame">{{0, 44}, {320, 293}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="883087562"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
@@ -80,6 +82,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{20, 20}, {280, 33}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="326177570"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -109,6 +112,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{20, 345}, {280, 33}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="162753091"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -128,6 +132,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{20, 386}, {280, 54}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -157,6 +162,7 @@
 				</array>
 				<string key="NSFrame">{{0, 20}, {320, 460}}</string>
 				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="162027366"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
@@ -227,6 +233,15 @@
 						<reference key="destination" ref="372490531"/>
 					</object>
 					<int key="connectionID">14</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">manualSearch:</string>
+						<reference key="source" ref="162753091"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">27</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -303,9 +318,55 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">26</int>
+			<int key="maxID">27</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes"/>
+		<object class="IBClassDescriber" key="IBDocument.Classes">
+			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
+				<object class="IBPartialClassDescription">
+					<string key="className">ViewController</string>
+					<string key="superclassName">UIViewController</string>
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">manualSearch:</string>
+						<string key="NS.object.0">id</string>
+					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<string key="NS.key.0">manualSearch:</string>
+						<object class="IBActionInfo" key="NS.object.0">
+							<string key="name">manualSearch:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</object>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="manual">UIButton</string>
+						<string key="nearby">UILabel</string>
+						<string key="notwhatlooking">UILabel</string>
+						<string key="searchtable">UITableView</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="manual">
+							<string key="name">manual</string>
+							<string key="candidateClassName">UIButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="nearby">
+							<string key="name">nearby</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="notwhatlooking">
+							<string key="name">notwhatlooking</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="searchtable">
+							<string key="name">searchtable</string>
+							<string key="candidateClassName">UITableView</string>
+						</object>
+					</dictionary>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/ViewController.h</string>
+					</object>
+				</object>
+			</array>
+		</object>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaTouchFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
