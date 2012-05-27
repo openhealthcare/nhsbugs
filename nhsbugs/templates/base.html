@@ -37,7 +37,7 @@
             <ul>
                 <li class="home {% active request home %}"><a href="{% url home %}">Home</a></li>
                 <li class="list_hospitals {% active request hospital %}"><a href="{% url list_hospitals %}">Hospitals</a></li>
-                <li class="my_bugs {% active request my_bugs %}"><a href="#">My Bugs</a></li>
+                <li class="my_bugs {% active request my_bugs %}"><a href="{% url my_bugs %}">My Bugs</a></li>
                 {% if user.is_authenticated %}
                 <li><span class="userInfo {% active request login %}">Logged in as: {{ user.username }}</span>(<a href="/logout/">Logout</a>)</li>
                 {% else %}
