@@ -54,7 +54,7 @@ def report_bug(request,hospital_slug=None):
     except Hospital.DoesNotExist:
         hospital = None
 
-    hospitals = Hospital.objects.all()
+    hospitals = Hospital.objects.order_by('name').all()
 
     form = BugForm(request.POST or None,
                    request.FILES or None,
