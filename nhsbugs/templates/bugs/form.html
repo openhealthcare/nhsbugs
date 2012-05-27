@@ -11,12 +11,12 @@
     <label for="hospital">Hospital:</label>
     <select id="hospital" name="hospital" required>
     {% for hospital in hospitals %}
-        <option value="{{ hospital.id }}">{{ hospital.name }}</option>
+        <option value="{{ hospital.id }}" {% ifequal form.hospital.value hospital.id %}selected{% endifequal %}>{{ hospital.name }}</option>
     {% endfor %}
     </select>
     
     <label for="pic">Picture:</label>
-    <input id="pic" name="pic" type="file" />
+    <input id="pic" name="pic" type="file" value={{ form.pic.value|default:'' }} />
 
     <button type='Submit'>Report it!</button>
 </form>

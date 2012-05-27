@@ -6,11 +6,22 @@
 
     <hgroup>
         <h1>{{ bug.title }}</h1>
-        <h2>{{ bug.get_vote_counts }} votes</h2>
-        <time pubdate>{{ bug.report_date }}</time>
+        <h2>{{ bug.hospital }}</h2>
     </hgroup>
+    
+    <section class="meta">
+        <span class="info">{{ bug.get_vote_counts }} votes</span>
+        <time pubdate>{{ bug.report_date }}</time>
+{% if bug.more %}
+        <a href="{% url view_bug slug=bug.slug %}" class="more">More information</a>
+{% endif %}
+    </section>
 
-    <p class="detail">{% firstof description bug.description %}</p>
-
-    <a href="{% url view_bug slug=bug.slug %}" class="more">More information</a>
+    <p class="detail">
+{% if bug.more %}
+    {{ bug.description|truncatechars:50 }}
+{% else %}
+    {{bug.description}}
+{% endif %}
+    </p>
 </article>

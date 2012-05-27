@@ -3,10 +3,10 @@
 {% block content %}
 
 <section class="bugsList">
-    <h1>Popular Bugs</h1>
+    <h1>Recent Bugs</h1>
 
 {% for bug in recent_bugs %}
-    {% include 'bugs/detail.html' with description=bug.description|truncatechars:50 %}
+    {% include 'bugs/detail.html' with description=bug.description|truncatechars:50 moreInfo=True %}
 {% endfor %}
 </section>
 
