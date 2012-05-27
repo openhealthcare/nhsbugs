@@ -265,7 +265,7 @@ header nav {
     clear: both;
     display: block;
 }
-` {
+.main>section {
     float: left;
     width: 50%;
     padding: 0;
