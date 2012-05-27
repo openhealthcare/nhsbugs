@@ -1,6 +1,5 @@
 <form action="/bugs/report/" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
-<<<<<<< HEAD
     
     <label for="title">Title:</label>
     <input id="title" name="title" type="text" value="{{ form.cleaned_data.title }}" required />
