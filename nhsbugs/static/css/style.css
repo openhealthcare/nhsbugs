@@ -293,11 +293,16 @@ nav {
     margin: 0;
 }
 .main>section:first-of-type {
-    box-sizing: border-box;
+    margin-top: 1px;
+    -moz-box-sizing:    border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing:         border-box;
     padding-right: 20px;
 }
 .main>section:first-of-type+section {
-    -moz-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing:         border-box;
     box-sizing: border-box;
     padding-left: 20px;
     border-left: 2px solid #ccc;
