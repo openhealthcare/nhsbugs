@@ -11,11 +11,11 @@
     
     <section class="meta">
         <span class="voting">
-{% if not user_vote %}
+{% if bug.user_voted %}
+            (voted)
+{% else %}
             <a href="{% url vote_bug slug=bug.slug score=1%}" class="up">&#9650;</a>
             <a href="{% url vote_bug slug=bug.slug score=-1%}" class="down">&#9660;</a>
-{% else %}
-            (voted)
 {% endif %}
         </span>
         <span>
