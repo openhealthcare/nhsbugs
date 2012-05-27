@@ -5,6 +5,8 @@
 {% block content %}
 <h1>List of hospitals</h1>
 
+<p>Filter: <input id="hospitalQuicksearch" /></p>
+
 <section class="first">
     <ul class="hospitals">
 {% for hospital in hospitals_a %}
@@ -23,4 +25,9 @@
 {% endfor %}
     </ul>
 </section>
+
+<script type="text/javascript">
+    $('input#hospitalQuicksearch').quicksearch('.first ul li');
+    $('input#hospitalQuicksearch').quicksearch('.second ul li');
+</script>
 {% endblock %}
