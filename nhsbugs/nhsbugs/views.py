@@ -19,7 +19,7 @@ def home(request):
     form = BugForm(initial={"reporter":request.user})
     return render_to_response('home.html',
                                {
-                               'top_bugs': recent_bugs,
+                               'recent_bugs': recent_bugs,
                                'form': form,
                                'hospitals': hospitals
                                },
