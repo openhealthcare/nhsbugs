@@ -3,12 +3,12 @@
 {% block content %}
 
 <h1>Report a bug!</h1>
+<section>
+    {% if form.errors %}
+        {{ form.errors }}
+    {% endif %}
 
-{% if form.errors %}
-    {{ form.errors }}
-{% endif %}
-
-{% include "bugs/form.html" %}
-
+    {% include "bugs/form.html" %}
+</section>
 
 {% endblock %}
