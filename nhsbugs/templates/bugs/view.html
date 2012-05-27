@@ -3,12 +3,6 @@
 
 {% block content %}
 
-{{ votes_up }} | {{ votes_down }} | {{ votes_total }}
-User_Voted: {{ user_vote }}
-<br/>
-<a href="{% url vote_bug slug=bug.slug score=1%}">Vote UP</a><br/>
-<a href="{% url vote_bug slug=bug.slug score=-1%}">Vote Down</a><br/>
-
 <section class="bugsList">
     {% include 'bugs/detail.html' %}
 </section>

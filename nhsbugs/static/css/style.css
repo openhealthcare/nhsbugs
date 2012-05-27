@@ -204,21 +204,21 @@ body {
     margin: 0;
     padding: 0;
 }
-time, .info {
+time, .meta span {
     display: block;
     font-size: 0.8em;
     color: #888;
 }
-header {
+.top {
     background-color: #eee;
     box-shadow: 0 -20px 20px 20px #888;
 }
 header h1 {
-    float: left;
     font-weight: 300;
     height: 77px;
     line-height: 77px;
     padding: 0;
+    margin: 0;
 }
 header img {
     float: left;
@@ -261,13 +261,13 @@ nav li.selected:after {
 nav li.selected:first-child:after {
     margin-left: -10px;
 }
-header h1, nav, .main, header .logo {
+
+header, .main, footer {
     max-width: 920px;
     margin: 0 auto;
 }
 nav {
-    clear: both;
-    padding: 0 20px;
+    padding: 0;
 }
 .userInfo {
     color: #666666;
@@ -414,4 +414,12 @@ button:hover {
         border-left: none;
         border-top: 2px solid #ccc;
     }
+}
+
+.voting {
+    float: right;
+    margin-left: 5px;
+}
+.voting a {
+    text-decoration: none;
 }
