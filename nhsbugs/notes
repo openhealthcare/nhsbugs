@@ -1,6 +1,4 @@
-{% load voting_tags %}
+TODO:
 
-{% score_for_object bug as score %}
-
-{{ score.score }} point{{ score.score|pluralize }}
-after {{ score.num_votes }} vote{{ score.num_votes|pluralize }}
+Fix urlconf issues with facilities/hospital+sha
+May need to add GP surgeries?
