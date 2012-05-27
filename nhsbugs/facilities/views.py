@@ -8,11 +8,21 @@ from django.template import RequestContext
 from models import SHA, Hospital
 from bugs.models import Bug
 
+def chunkIt(seq, num):
+  avg = len(seq) / float(num)
+  out = []
+  last = 0.0
+  while last < len(seq):
+    out.append(seq[int(last):int(last + avg)])
+    last += avg
+  return out
+
 def list_hospitals(request):
-    hospitals = Hospital.objects.order_by('name').all()
+    hospitals_a, hospitals_b = chunkIt(Hospital.objects.order_by('name').all(), 2)
     return render_to_response('facilities/hospital_list.html',
                                {
-                                 'hospitals': hospitals
+                                 'hospitals_a': hospitals_a,
+                                 'hospitals_b': hospitals_b,
                                },
                                context_instance=RequestContext(request))
 
