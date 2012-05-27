@@ -204,12 +204,12 @@ body {
     margin: 0;
     padding: 0;
 }
-time, .info {
+time, .meta span {
     display: block;
     font-size: 0.8em;
     color: #888;
 }
-header {
+.top {
     background-color: #eee;
     box-shadow: 0 -20px 20px 20px #888;
 }
@@ -253,13 +253,10 @@ nav li.selected:after {
 nav li.selected:first-child:after {
     margin-left: -10px;
 }
-header h1, nav, .main, footer {
+header, .main, footer {
     max-width: 920px;
     padding: 20px;
     margin: 0 auto;
-}
-nav {
-    padding: 0 20px;
 }
 .main:after {
     content: '';
@@ -397,4 +394,12 @@ button {
         border-left: none;
         border-top: 2px solid #ccc;
     }
+}
+
+.voting {
+    float: right;
+    margin-left: 5px;
+}
+.voting a {
+    text-decoration: none;
 }

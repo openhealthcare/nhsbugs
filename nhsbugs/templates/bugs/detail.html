@@ -10,7 +10,17 @@
     </hgroup>
     
     <section class="meta">
-        <span class="info">{{ bug.get_vote_counts }} votes</span>
+        <span class="voting">
+{% if not user_vote %}
+            <a href="{% url vote_bug slug=bug.slug score=1%}" class="up">&#9650;</a>
+            <a href="{% url vote_bug slug=bug.slug score=-1%}" class="down">&#9660;</a>
+{% else %}
+            (voted)
+{% endif %}
+        </span>
+        <span>
+            {{ bug.get_vote_counts }} votes
+        </span>
         <time pubdate>{{ bug.report_date }}</time>
 {% if bug.more %}
         <a href="{% url view_bug slug=bug.slug %}" class="more">More information</a>
