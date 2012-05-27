@@ -53,9 +53,9 @@ def report_bug(request,hospital_slug=None):
         init_data["hospital"] = hospital
     except Hospital.DoesNotExist:
         hospital = None
-    
+
     hospitals = Hospital.objects.all()
-    
+
     form = BugForm(request.POST or None,
                    request.FILES or None,
                    initial=init_data)
@@ -74,6 +74,7 @@ def report_bug(request,hospital_slug=None):
     return render_to_response('bugs/report.html',
                                {
                                 "form": form,
-                                "hospitalKnown": not hospital is None
+                                "hospitalKnown": not hospital is None,
+                                "hospitals": hospitals
                                },
                                context_instance=RequestContext(request))
