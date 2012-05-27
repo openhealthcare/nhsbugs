@@ -15,6 +15,12 @@ class BugResource(ModelResource):
             url(r"^(?P<resource_name>%s)/search%s$" % (self._meta.resource_name, trailing_slash()), self.wrap_view('get_search'), name="api_get_search"),
         ]
 
+    def dehydrate(self, bundle):
+        if 'pic' in bundle.data:
+            if bundle.data.get('pic', ''):
+                bundle.data['pic'] = '/media/' + bundle.data['pic']
+        return bundle
+
     def get_search(self, request, **kwargs):
         self.method_check(request, allowed=['get'])
         self.is_authenticated(request)
