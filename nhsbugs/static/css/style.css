@@ -211,7 +211,15 @@ header {
     box-shadow: 0 -20px 20px 20px #888;
 }
 header h1 {
+    float: left;
     font-weight: 300;
+    height: 77px;
+    line-height: 77px;
+    padding: 0;
+}
+header img {
+    float: left;
+    margin: 10px 10px 10px 0;
 }
 nav ul:after {
     content: '';
@@ -250,13 +258,17 @@ nav li.selected:after {
 nav li.selected:first-child:after {
     margin-left: -10px;
 }
-header h1, nav, .main {
+header h1, nav, .main, header .logo {
     max-width: 920px;
-    padding: 20px;
     margin: 0 auto;
 }
 nav {
+    clear: both;
     padding: 0 20px;
+}
+.userInfo {
+    color: #666666;
+    margin-right: 3px;
 }
 .main:after {
     content: '';

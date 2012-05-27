@@ -20,7 +20,7 @@
   <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
   <header>
     {% block header %}
-    <h1>NHS Bugs</h1>
+    <div class="logo"><img src="{{ MEDIA_URL }}/img/logo.png" /><h1>NHS Bugs</h1></div>
     {% endblock %}
     <nav>
         <ul>
@@ -28,7 +28,7 @@
             <li class="list_hospitals"><a href="{% url list_hospitals %}">Hospitals</a></li>
             <li class="my_bugs"><a href="#">My Bugs</a></li>
             {% if user.is_authenticated %}
-            <li>Logged in as: {{ user.username }} <a href="/logout/">Logout</a></li>
+            <li><span class="userInfo">Logged in as: {{ user.username }}</span>(<a href="/logout/">Logout</a>)</li>
             {% else %}
             <li><a href="/login/">Login/Register</a></li>
             {% endif %}
