@@ -138,6 +138,7 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'django.contrib.comments',
     "django.contrib.messages",
+    'registration',
     'social_auth',
     'facilities',
     'bugs',
