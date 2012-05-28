@@ -29,6 +29,7 @@ urlpatterns = patterns('',
     url(r'^surgery/$',"facilities.views.list_surgeries", name='surgery_list'),
     url(r'^surgery/(?P<slug>[\w-]+)$', "facilities.views.view_surgery", name='surgery_view'),
 
+    url(r'', include('social_auth.urls')),
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
 
