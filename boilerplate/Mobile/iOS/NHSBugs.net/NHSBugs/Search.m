@@ -78,7 +78,8 @@
     int storyIndex = [indexPath indexAtPosition: [indexPath length] - 1];
     
     if(searching){
-        cell.textLabel.text = [searchStories objectAtIndex:storyIndex];
+        cell.textLabel.text = [
+                               searchStories objectAtIndex:storyIndex];
     }else{
         cell.textLabel.text = [names objectAtIndex:storyIndex];
     }
